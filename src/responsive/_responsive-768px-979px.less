@@ -1,0 +1,32 @@
+//
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+// 768px-979px
+
+@import '../layout/_grid';
+@import '../layout/_fluid';
+@import '../layout/_metro';
+
+@columns:                 12;
+@gridColumnWidth768:      42px;
+@gridGutterWidth768:      20px;
+@gridRowWidth768:         (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1));
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+  // Fixed grid
+  .grid{
+  	.makeGrid(@columns, @gridColumnWidth768, @gridGutterWidth768);
+  }
+
+  // Fluid grid
+  .fluid{
+  	.makeFluid(@columns, @fluidGridColumnWidth768, @fluidGridGutterWidth768);
+  }
+
+  // Metro grid
+  .metro{
+  	.makeMetro(@columns, @fluidGridColumnWidth768, @fluidGridGutterWidth768);
+  }
+
+}
