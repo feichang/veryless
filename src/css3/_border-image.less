@@ -7,9 +7,9 @@
  */
 
 .border-image(@url, @width, @repeat){
-	border: @width solid transparent;
-      -moz-border-image:url(@url) @width @width @repeat; 
-    	-webkit-border-image:url(@url) @width @width @repeat; 
-    	  -o-border-image:url(@url) @width @width @repeat; 
-    		border-image:url(@url) @width @width @repeat;
+	border: '@{width} solid transparent';
+      -moz-border-image:'url(@{url}) @width @width @repeat'; 
+    	-webkit-border-image:'url(@{url}) @width @width @repeat'; 
+    	  -o-border-image:'url(@{url}) @width @width @repeat'; 
+    		border-image:'url(@{url}) @width @width @repeat';
 }
