@@ -1,5 +1,7 @@
-VeryLess
+VeryLess 
 ==========
+
+主页：http://veryless.org
 
 VeryLess 是 基于LESS 的扩展库 , 由LESS中国社区(http://lesscss.net)发起
 
