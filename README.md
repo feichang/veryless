@@ -3,7 +3,7 @@ VeryLess
 
 主页：http://veryless.org
 
-VeryLess 是 基于LESS 的扩展库 , 由LESS中国社区(http://lesscss.net)发起
+VeryLess 是 基于LESS 的扩展库 , 由LESS中国社区( http://lesscss.net/ )发起
 
 提供一系列方法库，包括Reset方法, CSS3方法, 布局方法(Grid生成,Fluid Grid生成, Metro Grid生成)，响应式设计,工具方法等
 
