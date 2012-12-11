@@ -1,23 +1,19 @@
 <!doctype html>
 <html>
 <head>
-	<title></title>
+	<title>Fluid Grid - VeryLess</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/less" href="../../src/layout/_950-col24-width30-margin10-grid.less">
-	<script type="text/javascript" src="../../lib/less.js"></script>
-	<style type="text/css">
-		.row{
-			margin-bottom: 10px;
-		}
-		.span{
-			background: #999;
-			height: 30px;
-		}
-	</style>
+	<link rel="stylesheet" type="text/less" href="./demo.less">
+	<script type="text/javascript" src="../../less.js"></script>
 </head>
 <body>
-<div class="grid">
-	<div class="row">
+<div class="fluid">
+	<div class="row-fluid">
+		<div class="span span1 first-child"></div>
+		<div class="span span1"></div>
+		<div class="span span1"></div>
+		<div class="span span1"></div>
+		<div class="span span1"></div>
 		<div class="span span1"></div>
 		<div class="span span1"></div>
 		<div class="span span1"></div>
@@ -39,7 +35,8 @@
 		<div class="span span1"></div>
 	</div>
 
-	<div class="row">
+	<div class="row-fluid">
+		<div class="span span2 first-child"></div>
 		<div class="span span2"></div>
 		<div class="span span2"></div>
 		<div class="span span2"></div>
@@ -48,39 +45,47 @@
 		<div class="span span2"></div>
 		<div class="span span2"></div>
 		<div class="span span2"></div>
+		<div class="span span2"></div>
+		<div class="span span2"></div>
+		<div class="span span2"></div>
+	</div>
+
+	<div class="row-fluid">
+		<div class="span span3 first-child"></div>
+		<div class="span span3"></div>
+		<div class="span span3"></div>
+		<div class="span span3"></div>
+		<div class="span span3"></div>
+		<div class="span span3"></div>
+		<div class="span span3"></div>
 		<div class="span span3"></div>
 	</div>
 
-	<div class="row">
-		<div class="span span3"></div>
-		<div class="span span3"></div>
-		<div class="span span3"></div>
-		<div class="span span3"></div>
-		<div class="span span3"></div>
+	<div class="row-fluid">
+		<div class="span span4 first-child"></div>
 		<div class="span span4"></div>
-	</div>
-
-	<div class="row">
 		<div class="span span4"></div>
 		<div class="span span4"></div>
 		<div class="span span4"></div>
 		<div class="span span4"></div>
-		<div class="span span3"></div>
 	</div>
 
-	<div class="row">
+	<div class="row-fluid">
+		<div class="span span6 first-child"></div>
 		<div class="span span6"></div>
 		<div class="span span6"></div>
-		<div class="span span7"></div>
+		<div class="span span6"></div>
 	</div>
 
-	<div class="row">
-		<div class="span span9"></div>
-		<div class="span span10"></div>
+	<div class="row-fluid">
+		<div class="span span8 first-child"></div>
+		<div class="span span8"></div>
+		<div class="span span8"></div>
 	</div>
 
-	<div class="row">
-		<div class="span span19"></div>
+	<div class="row-fluid">
+		<div class="span span12 first-child"></div>
+		<div class="span span12"></div>
 	</div>
 </div>
 </body>
