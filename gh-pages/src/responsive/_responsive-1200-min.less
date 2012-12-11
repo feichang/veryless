@@ -1,0 +1,30 @@
+//
+// Responsive: Large desktop and up
+// --------------------------------------------------
+@import '../layout/_grid';
+@import '../layout/_fluid';
+@import '../layout/_metro';
+
+@columns:                 12;
+@gridColumnWidth1200:     70px;
+@gridGutterWidth1200:     30px;
+@gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
+
+@media (min-width: 1200px) {
+
+  // Fixed grid
+  .grid{
+    .makeGrid(@columns, @gridColumnWidth1200, @gridGutterWidth1200);
+  }
+
+  // Fluid grid
+  .fluid{
+    .makeFluid(@columns, @fluidGridColumnWidth1200, @fluidGridGutterWidth1200);
+  }
+
+  // Metro grid
+  .metro{
+    .makeMetro(@columns, @fluidGridColumnWidth1200, @fluidGridGutterWidth1200);
+  }
+
+}
