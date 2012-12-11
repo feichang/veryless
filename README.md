@@ -12,3 +12,7 @@ VeryLess 是 基于LESS 的CSS扩展库
 VeryLess还在开发中，欢迎感兴趣的同学加入一同开发。
 
 @author: 飞长 http://veryued.org
+
+
+目前开发人员：
+飞长，TooBug
