@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+	<title>OverView - VeryLess - 基于LESS的扩展库</title>
+	<meta charset="utf-8">
+	<link href='http://fonts.googleapis.com/css?family=Uncial+Antiqua' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/less" href="./assets/css/doc.less">
+	<script type="text/javascript" src="./assets/js/less.js"></script>
+</head>
+<body>
+<div class="metro page" id="overview">
+	<div class="row">
+		<div class="span span6">
+			<div class="row">
+				<div class="span span6 line1">
+					<h1>OverView</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span span6">
+			<div class="row">
+				<div class="span span6">
+					<h3 class="title">一. 如何使用?</h3>
+					<h4>（1）直接下载方式:</h4>
+					<div class="code">
+						<p>将verless.less下载到本地，然后在自己的样式文件中引入，如下：</p>
+						<p>@import 'veryless.less';</p>
+					</div>
+					<h4>（2）Node方式:</h4>
+					<div class="code">
+						<p>首先，确认你的机器已经安装node与npm</p>
+					</div>
+					<div class="code">
+						<p>npm install -g veryless</p>
+					</div>
+					<div class="code">
+						<p>mkdir test</p>
+					</div>
+					<div class="code">
+						<p>veryless -create test</p>
+					</div>
+
+
+					<h3 class="title">二. 小试牛刀</h3>
+					<h4>（1）CSS3 (<a href="" target="_blank">Demo Coming...</a>):</h4>
+					<div class="code">
+						<p>阴影：</p>
+						<p>.box-shadow(5px 5px 10px #ccc);</p>
+					</div>
+					<div class="code">
+						<p>透明：</p>
+						<p>.opacity(80);</p>
+					</div>
+					<div class="code">
+						<p>圆角：</p>
+						<p>.border-radius(10px);</p>
+					</div>
+					<div class="code">
+						<p>旋转：</p>
+						<p>.rotate(10deg);</p>
+					</div>
+					<h4>（2）Grid (<a href="http://veryless.org/examples/grid.html" target="_blank">Demo</a>):</h4>
+					<div class="code">
+						<p>创建24格栅格布局：</p>
+						<p>.makeGrid();</p>
+					</div>
+					<div class="code">
+						<p>创建24格流式布局：</p>
+						<p>.makeFluid();</p>
+					</div>
+					<div class="code">
+						<p>创建6格Metro布局：</p>
+						<p>.makeMetro();</p>
+					</div>
+
+					<h3 class="title">
+						<a href="https://github.com/feichang/veryless" target="_blank">Read More...</a>
+					</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span span6 line1 footer">
+			<p>veryless.org &copy;2012 <a href="#">Powered By飞长</a></p>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36956296-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

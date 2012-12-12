@@ -1,0 +1,26 @@
+// 未知尺寸图片垂直剧中
+// <div class="vl-img-vertical">
+// <img/>
+// </div>
+// @params 图片外层div的width height
+// @author tangoboy <zhulutangoboy@gmail.com>
+
+.vl-img-vertical(@width,@height){
+	
+	@fontsize:round(@height * 0.873);
+	width:~'@{width}px';
+	height:~'@{height}px';
+	overflow:hidden;
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+	*display: block;
+	*font:~"@{fontsize}px/1em Arial";
+
+	img{
+		max-height:~'@{height}px';
+		max-width:~'@{width}px';
+		vertical-align:middle;
+	}
+
+}

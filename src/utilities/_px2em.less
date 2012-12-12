@@ -1,0 +1,12 @@
+//px2em
+//@author 飞长 <veryued@gmail.com>
+
+.vl-width-px2em(@pixel: 16){
+	@per: (@pixel/16);
+	width: ~"@{per}em";
+}
+
+.vl-font-px2em(@pixel: 12){
+	@per: (@pixel/16);
+	font-size: ~"@{per}em";
+}
