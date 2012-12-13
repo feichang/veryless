@@ -43,8 +43,11 @@
 
   html {
     font-size: 100%;
+    text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -o-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
   }
   // Focus states
   a:focus {
@@ -54,6 +57,9 @@
   a:hover,
   a:active {
     outline: 0;
+  }
+  a:hover{
+    _zoom: 1;
   }
 
   // Prevents sub and sup affecting line-height in all browsers
@@ -80,6 +86,7 @@
     height: auto;
     border: 0;
     -ms-interpolation-mode: bicubic;
+    image-rendering: optimizeQuality; /* Firefox 3.6+ */
     vertical-align: middle;
   }
 
@@ -126,5 +133,7 @@
     overflow: auto; // Remove vertical scrollbar in IE6-9
     vertical-align: top; // Readability and alignment cross-browser
   }
-
+  
+  
+  
 }
