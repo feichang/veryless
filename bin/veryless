@@ -21,6 +21,13 @@ fs.mkdir(folderPath+'/css');
 http.get("http://veryless.googlecode.com/files/veryless.less", function(res) {
   var ws = fs.createWriteStream(folderPath+'/veryless.less');
   res.pipe(ws);
+}).on('error', function(e) {
+  console.log("Got error: " + e.message);
+});
+
+http.get("http://veryless.googlecode.com/files/veryless-plugin.less", function(res) {
+  var ws = fs.createWriteStream(folderPath+'/veryless-plugin.less');
+  res.pipe(ws);
   console.log('veryless create done');
 }).on('error', function(e) {
   console.log("Got error: " + e.message);
