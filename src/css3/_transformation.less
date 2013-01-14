@@ -38,71 +38,71 @@
           transform: scale(@degress);
 }
 .rotate3d(@x, @y, @z, @degress){
-  -webkit-transform: rotate3d(@x, @y, @z, @degress);
-     -moz-transform: rotate3d(@x, @y, @z, @degress);
-      -ms-transform: rotate3d(@x, @y, @z, @degress);
-       -o-transform: rotate3d(@x, @y, @z, @degress);
-          transform: rotate3d(@x, @y, @z, @degress);
+  -webkit-transform: rotate3d(@arguments);
+     -moz-transform: rotate3d(@arguments);
+      -ms-transform: rotate3d(@arguments);
+       -o-transform: rotate3d(@arguments);
+          transform: rotate3d(@arguments);
 }
 .rotateX(@degress){
-  -webkit-transform: rotateX(@degrees);
-     -moz-transform: rotateX(@degrees);
-      -ms-transform: rotateX(@degrees);
-       -o-transform: rotateX(@degrees);
-          transform: rotateX(@degrees);
+  -webkit-transform: rotateX(@arguments);
+     -moz-transform: rotateX(@arguments);
+      -ms-transform: rotateX(@arguments);
+       -o-transform: rotateX(@arguments);
+          transform: rotateX(@arguments);
 }
 .rotateY(@degress){
-  -webkit-transform: rotateY(@degrees);
-     -moz-transform: rotateY(@degrees);
-      -ms-transform: rotateY(@degrees);
-       -o-transform: rotateY(@degrees);
-          transform: rotateY(@degrees);
+  -webkit-transform: rotateY(@arguments);
+     -moz-transform: rotateY(@arguments);
+      -ms-transform: rotateY(@arguments);
+       -o-transform: rotateY(@arguments);
+          transform: rotateY(@arguments);
 }
 .rotateZ(@degress){
-  -webkit-transform: rotateZ(@degrees);
-     -moz-transform: rotateZ(@degrees);
-      -ms-transform: rotateZ(@degrees);
-       -o-transform: rotateZ(@degrees);
-          transform: rotateZ(@degrees);
+  -webkit-transform: rotateZ(@arguments);
+     -moz-transform: rotateZ(@arguments);
+      -ms-transform: rotateZ(@arguments);
+       -o-transform: rotateZ(@arguments);
+          transform: rotateZ(@arguments);
 }
 
 
 //缩放
-.scale(@ratio) {
-  -webkit-transform: scale(@ratio);
-     -moz-transform: scale(@ratio);
-      -ms-transform: scale(@ratio);
-       -o-transform: scale(@ratio);
-          transform: scale(@ratio);
+.scale(@x, @y) {
+  -webkit-transform: scaleX(@x) scaleY(@y);
+     -moz-transform: scaleX(@x) scaleY(@y);
+      -ms-transform: scaleX(@x) scaleY(@y);
+       -o-transform: scaleX(@x) scaleY(@y);
+          transform: scaleX(@x) scaleY(@y);
 }
-.scaleX(@ratio) {
-  -webkit-transform: scaleX(@ratio);
-     -moz-transform: scaleX(@ratio);
-      -ms-transform: scaleX(@ratio);
-       -o-transform: scaleX(@ratio);
-          transform: scaleX(@ratio);
+.scaleX(@x) {
+  -webkit-transform: scaleX(@arguments);
+     -moz-transform: scaleX(@arguments);
+      -ms-transform: scaleX(@arguments);
+       -o-transform: scaleX(@arguments);
+          transform: scaleX(@arguments);
 }
-.scaleY(@ratio) {
-  -webkit-transform: scaleY(@ratio);
-     -moz-transform: scaleY(@ratio);
-      -ms-transform: scaleY(@ratio);
-       -o-transform: scaleY(@ratio);
-          transform: scaleY(@ratio);
+.scaleY(@y) {
+  -webkit-transform: scaleY(@arguments);
+     -moz-transform: scaleY(@arguments);
+      -ms-transform: scaleY(@arguments);
+       -o-transform: scaleY(@arguments);
+          transform: scaleY(@arguments);
 }
 
 //重定位元素
 .translate(@x, @y) {
-  -webkit-transform: translate(@x, @y);
-     -moz-transform: translate(@x, @y);
-      -ms-transform: translate(@x, @y);
-       -o-transform: translate(@x, @y);
-          transform: translate(@x, @y);
+  -webkit-transform: translate(@arguments);
+     -moz-transform: translate(@arguments);
+      -ms-transform: translate(@arguments);
+       -o-transform: translate(@arguments);
+          transform: translate(@arguments);
 }
 .translate3d(@x, @y, @z) {
-  -webkit-transform: translate3d(@x, @y, @z);
-     -moz-transform: translate3d(@x, @y, @z);
-       -o-transform: translate3d(@x, @y, @z);
-          transform: translate3d(@x, @y, @z);
+  -webkit-transform: translate3d(@arguments);
+     -moz-transform: translate3d(@arguments);
+       -o-transform: translate3d(@arguments);
+          transform: translate3d(@arguments);
 }
 .translateX(@x){
   -webkit-transform: translateX(@x);
@@ -128,11 +128,11 @@
 
 //倾斜
 .skew(@x, @y) {
-  -webkit-transform: skew(@x, @y);
-     -moz-transform: skew(@x, @y);
+  -webkit-transform: skew(@arguments);
+     -moz-transform: skew(@arguments);
       -ms-transform: skewX(@x) skewY(@y); 
-       -o-transform: skew(@x, @y);
-          transform: skew(@x, @y);
+       -o-transform: skew(@arguments);
+          transform: skew(@arguments);
   -webkit-backface-visibility: hidden;
 }
 .skewX(@x) {

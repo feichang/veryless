@@ -1,0 +1,35 @@
+@import '../../../src/css3/_border-radius.less';
+body{
+	padding: 50px;
+}
+#demo{
+	.btn(){
+		display: block;
+		width: 100px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		text-decoration: none;
+		color: #fff;
+		background: #f44;
+		font-size: 12px;
+		margin-bottom: 100px;
+	}
+	.btn1{
+		.btn();
+		.border-radius();
+	}
+	.btn2{
+		.btn;
+		.border-radius(20px);
+	}
+	.btn3{
+		.btn;
+		.border-top-radius(10px);
+	}
+	.btn4{
+		.btn;
+		.border-top-left-radius(20px);
+	}
+
+}
