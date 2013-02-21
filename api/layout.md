@@ -5,7 +5,7 @@
 	* 默认950宽 24列 每列30px 间距10px
 	* HTML结构:
 	* 
->```
+```
  <div class="grid">
 	<div class="row">
 		<div class="span span6"></div>
