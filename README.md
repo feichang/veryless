@@ -6,7 +6,7 @@ VeryLess是基于LESS的Mixin扩展库,由LESS中国社区( http://lesscss.net/ 
 
 ## 使用方法
 	
-	npm install veryless
+	npm install -g veryless
 
 	Usage:
 
