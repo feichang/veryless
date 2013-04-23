@@ -30,7 +30,7 @@ VeryLess是基于LESS的Mixin扩展库,由LESS中国社区( http://lesscss.net/ 
 
 ## API文档
 
-	https://github.com/feichang/veryless/tree/master/api
+https://github.com/feichang/veryless/tree/master/api
 
 ## 分层说明
 
