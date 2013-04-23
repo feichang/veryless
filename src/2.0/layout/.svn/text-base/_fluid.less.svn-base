@@ -1,0 +1,71 @@
+// =============================================
+// @des:      veryless metro grid function
+// @author:   feichang <veryued@gmail.com>
+// @url:      http://veryless.org
+// @time:     2013-02-28
+// =============================================
+
+.makeFluid(@colnum: 24, @colwidth: 30px, @margin: 10px){
+  @gridColumns:             @colnum;
+  @gridColumnWidth:         @colwidth;
+  @gridGutterWidth:         @margin;
+  @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+  @fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
+  @fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);
+  .fluid (@fluidGridColumnWidth, @fluidGridGutterWidth) {
+
+    .spanX (@index) when (@index > 0) {
+      (~".span@{index}") { .span(@index); }
+      .spanX(@index - 1);
+    }
+    .spanX (0) {}
+
+    .offsetX (@index) when (@index > 0) {
+      (~'.offset@{index}') { .offset(@index); }
+      (~'.offset@{index}:first-child') { .offsetFirstChild(@index); }
+      .offsetX(@index - 1);
+    }
+    .offsetX (0) {}
+
+    .offset (@columns) {
+      margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) + (@fluidGridGutterWidth*2);
+      *margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%) + (@fluidGridGutterWidth*2) - (.5 / @gridRowWidth * 100 * 1%);
+    }
+
+    .offsetFirstChild (@columns) {
+      margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) + (@fluidGridGutterWidth);
+      *margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%) + @fluidGridGutterWidth - (.5 / @gridRowWidth * 100 * 1%);
+    }
+
+    .span (@columns) {
+      width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1));
+      *width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%);
+    }
+
+    .row-fluid {
+      width: 100%;
+      .clearfix();
+      .span {
+        float: left;
+        margin-left: @fluidGridGutterWidth;
+        *margin-left: @fluidGridGutterWidth - (.5 / @gridRowWidth * 100 * 1%);
+      }
+      .first-child {
+        margin-left: 0;
+      }
+
+      // Space grid-sized controls properly if multiple per line
+      .controls-row [class*="span"] + [class*="span"] {
+        margin-left: @fluidGridGutterWidth;
+      }
+
+      // generate .spanX and .offsetX
+      .spanX (@gridColumns);
+      .offsetX (@gridColumns);
+    }
+  }
+
+  .vl-fluid{
+    .fluid (@fluidGridColumnWidth, @fluidGridGutterWidth);
+  }
+}

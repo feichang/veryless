@@ -1,0 +1,40 @@
+//**
+// * 950px 6 columns Metro
+// * 
+// * <div class="metro">
+// *	<div class="row">
+// *		<div class="span span2">
+// *			<div class="row">
+// *				<div class="span span2 line2"></div>
+// *			</div>
+// *		</div>
+// *		<div class="span span2">
+// *			<div class="row">
+// *				<div class="span span1 line1"></div>
+// *				<div class="span span1 line1"></div>
+// *			</div>
+// *			<div class="row">
+// *				<div class="span span2 line1"></div>
+// *			</div>
+// *		</div>
+// *		<div class="span span2">
+//*			<div class="row">
+// *				<div class="span span1 line1"></div>
+// *				<div class="span span1 line1"></div>
+// *			</div>
+// *			<div class="row">
+// *				<div class="span span1 line1"></div>
+// *				<div class="span span1 line1"></div>
+// *			</div>
+// *		</div>
+// *	</div>
+// * </div>
+// * 
+// * @author 飞长 <veryued@gmail.com>
+// * 
+// */
+
+@import '../utilities/_clearfix';
+@import './_metro';
+
+.makeMetro();

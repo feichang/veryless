@@ -1,0 +1,83 @@
+10
+
+dir
+52445
+http://svn.app.taobao.net/repos/fed/trunk/fed/shop-team/sandbox/ishop/bin/veryless/src/2.0
+http://svn.app.taobao.net/repos/fed
+
+
+
+2013-04-16T08:22:42.029881Z
+52394
+feichang.wyl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+391ba30f-5e85-475d-8ba4-ce4df1b3e18b
+
+compatible
+dir
+
+module
+dir
+
+base
+dir
+
+shortcut
+dir
+
+README.md
+file
+
+
+
+
+2013-04-01T02:13:12.000000Z
+eafc7aaf6c90cb10dd5e10583ebe4576
+2013-04-01T02:58:59.636325Z
+51885
+feichang.wyl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+185
+
+layout
+dir
+
+util
+dir
+
+plugin
+dir
+

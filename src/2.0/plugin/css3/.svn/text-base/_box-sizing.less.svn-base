@@ -1,0 +1,11 @@
+//**
+// * box-sizing 盒模型计算方式
+// * @params	content-box padding-box border-box       
+// * @author	飞长 <veryued@gmail.com>
+// */
+
+.box-sizing(@boxmodel: content-box) {
+  -webkit-box-sizing: @boxmodel;
+     -moz-box-sizing: @boxmodel;
+          box-sizing: @boxmodel;
+}

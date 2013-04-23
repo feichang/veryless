@@ -1,0 +1,13 @@
+//**
+// * user-select
+// * @params	none | text | all | element
+// * @author 飞长 <veryued@gmail.com>
+//*/
+
+.user-select(@select: auto) {
+  -webkit-user-select: @select;
+     -moz-user-select: @select;
+      -ms-user-select: @select;
+       -o-user-select: @select;
+          user-select: @select;
+}

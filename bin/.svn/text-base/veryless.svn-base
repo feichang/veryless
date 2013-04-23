@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+
+//bin
+//@author feichang <veryued@gmail.com>
+var 
+  fs = require('fs'),
+	http = require('http'),
+  parr = process.argv,
+	folderPath = null,
+	len = 0;
+
+parr.forEach(function (val, index, array) {
+  if(val == '-create'){
+  	folderPath = parr[index+1];
+  }
+});
+
+fs.mkdir(folderPath+'/less');
+fs.mkdir(folderPath+'/css');
+
+http.get("http://veryless.googlecode.com/files/veryless.less", function(res) {
+  var ws = fs.createWriteStream(folderPath+'/veryless.less');
+  res.pipe(ws);
+}).on('error', function(e) {
+  console.log("Got error: " + e.message);
+});
+
+http.get("http://veryless.googlecode.com/files/veryless-plugin.less", function(res) {
+  var ws = fs.createWriteStream(folderPath+'/veryless-plugin.less');
+  res.pipe(ws);
+  console.log('veryless create done');
+}).on('error', function(e) {
+  console.log("Got error: " + e.message);
+});

@@ -1,0 +1,19 @@
+//**
+// * 950px 24 columns Grid
+// * Taobao 950 Grid http://kissy.googlecode.com/svn/trunk/src/cssgrids/grids-taobao.html
+// * 
+// * <div class="grid">
+// *   <div class="row">
+// *     <div class="span8 span"></div>
+// *     <div class="span16 span"></div>
+// *   </div>
+// * </div>
+// * 
+// * @author 飞长 <veryued@gmail.com>
+// * 
+// */
+
+@import '../utilities/_clearfix';
+@import './_grid';
+
+.makeGrid();

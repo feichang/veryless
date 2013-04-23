@@ -1,0 +1,59 @@
+//**
+// * 
+// * Grid Layout
+// * 
+// * @author 飞长 <veryued@gmail.com>
+// * 
+// */
+
+
+.makeGrid(@colnum: 24, @colwidth: 30px, @margin: 10px){
+  
+  @gridColumns:             @colnum;
+  @gridColumnWidth:         @colwidth;
+  @gridGutterWidth:         @margin;
+  @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+
+  .gridX (@gridColumnWidth, @gridGutterWidth) {
+    .spanX (@index) when (@index > 0) {
+      (~".span@{index}") { .span(@index); }
+      .spanX(@index - 1);
+    }
+    .spanX (0) {}
+
+    .offsetX (@index) when (@index > 0) {
+      (~".offset@{index}") { .offset(@index); }
+      .offsetX(@index - 1);
+    }
+    .offsetX (0) {}
+
+    .offset (@columns) {
+      margin-left: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns + 1));
+    }
+
+    .span (@columns) {
+      width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
+    }
+
+    .row {
+      margin-left: @gridGutterWidth * -1;
+      .clearfix();
+    }
+
+    .span{
+      float: left;
+      min-height: 1px; // prevent collapsing columns
+      margin-left: @gridGutterWidth;
+    }
+
+    // generate .spanX and .offsetX
+    .spanX (@gridColumns);
+    .offsetX (@gridColumns);
+
+  }
+  .grid{
+    .gridX(@gridColumnWidth, @gridGutterWidth);
+  }
+
+}

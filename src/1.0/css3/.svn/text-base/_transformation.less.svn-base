@@ -1,0 +1,152 @@
+//**
+// * transformation 
+// * @params  
+// * @author  飞长 <veryued@gmail.com>
+// */
+
+//**
+// * transform: none
+// * transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0)
+// * transform: translate(12px, 50%)
+// * transform: translateX(2em)
+// * transform: translateY(3in)
+// * transform: scale(2, 0.5)
+// * transform: scaleX(2)
+// * transform: scaleY(0.5)
+// * transform: rotate(0.5turn)
+// * transform: skewX(30deg)
+// * transform: skewY(1.07rad)
+// * transform: matrix3d(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0)
+// * transform: translate3d(12px, 50%, 3em)
+// * transform: translateZ(2px)
+// * transform: scale3d(2.5, 1.2, 0.3)
+// * transform: scaleZ(0.3)
+// * transform: rotate3d(1, 2.0, 3.0, 10deg)
+// * transform: rotateX(10deg)
+// * transform: rotateY(10deg)
+// * transform: rotateZ(10deg)
+// * transform: perspective(17px)
+// * transform: translateX(10px) rotate(10deg) translateY(5px)
+// */
+
+.rotate(@degress: 0deg) {
+  -webkit-transform: rotate(@degress);
+     -moz-transform: rotate(@degress);
+      -ms-transform: rotate(@degress);
+       -o-transform: rotate(@degress);
+          transform: rotate(@degress);
+}
+.rotate3d(@x: 0, @y: 0, @z: 0, @degress: 0deg){
+  -webkit-transform: rotate3d(@arguments);
+     -moz-transform: rotate3d(@arguments);
+      -ms-transform: rotate3d(@arguments);
+       -o-transform: rotate3d(@arguments);
+          transform: rotate3d(@arguments);
+}
+.rotateX(@degress: 0deg){
+  -webkit-transform: rotateX(@arguments);
+     -moz-transform: rotateX(@arguments);
+      -ms-transform: rotateX(@arguments);
+       -o-transform: rotateX(@arguments);
+          transform: rotateX(@arguments);
+}
+.rotateY(@degress: 0deg){
+  -webkit-transform: rotateY(@arguments);
+     -moz-transform: rotateY(@arguments);
+      -ms-transform: rotateY(@arguments);
+       -o-transform: rotateY(@arguments);
+          transform: rotateY(@arguments);
+}
+.rotateZ(@degress: 0deg){
+  -webkit-transform: rotateZ(@arguments);
+     -moz-transform: rotateZ(@arguments);
+      -ms-transform: rotateZ(@arguments);
+       -o-transform: rotateZ(@arguments);
+          transform: rotateZ(@arguments);
+}
+
+//缩放
+.scale(@x:0, @y:0) {
+  -webkit-transform: scaleX(@x) scaleY(@y);
+     -moz-transform: scaleX(@x) scaleY(@y);
+      -ms-transform: scaleX(@x) scaleY(@y);
+       -o-transform: scaleX(@x) scaleY(@y);
+          transform: scaleX(@x) scaleY(@y);
+}
+.scaleX(@x: 0) {
+  -webkit-transform: scaleX(@arguments);
+     -moz-transform: scaleX(@arguments);
+      -ms-transform: scaleX(@arguments);
+       -o-transform: scaleX(@arguments);
+          transform: scaleX(@arguments);
+}
+.scaleY(@y: 0) {
+  -webkit-transform: scaleY(@arguments);
+     -moz-transform: scaleY(@arguments);
+      -ms-transform: scaleY(@arguments);
+       -o-transform: scaleY(@arguments);
+          transform: scaleY(@arguments);
+}
+
+//重定位元素
+.translate(@x: 0px, @y: 0px) {
+  -webkit-transform: translate(@arguments);
+     -moz-transform: translate(@arguments);
+      -ms-transform: translate(@arguments);
+       -o-transform: translate(@arguments);
+          transform: translate(@arguments);
+}
+.translate3d(@x: 0px, @y: 0px, @z: 0px) {
+  -webkit-transform: translate3d(@arguments);
+     -moz-transform: translate3d(@arguments);
+       -o-transform: translate3d(@arguments);
+          transform: translate3d(@arguments);
+}
+.translateX(@x: 0px){
+  -webkit-transform: translateX(@x);
+     -moz-transform: translateX(@x);
+      -ms-transform: translateX(@x);
+       -o-transform: translateX(@x);
+          transform: translateX(@x);
+}
+.translateY(@y: 0px){
+  -webkit-transform: translateY(@y);
+     -moz-transform: translateY(@y);
+      -ms-transform: translateY(@y);
+       -o-transform: translateY(@y);
+          transform: translateY(@y);
+}
+.translateZ(@z: 0px){
+  -webkit-transform: translateZ(@z);
+     -moz-transform: translateZ(@z);
+      -ms-transform: translateZ(@z);
+       -o-transform: translateZ(@z);
+          transform: translateZ(@z);
+}
+
+//倾斜
+.skew(@x: 0deg, @y: 0deg) {
+  -webkit-transform: skew(@arguments);
+     -moz-transform: skew(@arguments);
+      -ms-transform: skewX(@x) skewY(@y); 
+       -o-transform: skew(@arguments);
+          transform: skew(@arguments);
+  -webkit-backface-visibility: hidden;
+}
+.skewX(@x: 0deg) {
+  -webkit-transform: skewX(@x);
+     -moz-transform: skewX(@x);
+      -ms-transform: skewX(@x);
+       -o-transform: skewX(@x);
+          transform: skewX(@x);
+  -webkit-backface-visibility: hidden;
+  //Webkit gives a pixelated edge. This can be resolved by adding the following line to the mixin. -webkit-backface-visibility: hidden;
+}
+.skewY(@y: 0deg) {
+  -webkit-transform: skewY(@y);
+     -moz-transform: skewY(@y);
+      -ms-transform: skewY(@y); 
+       -o-transform: skewY(@y);
+          transform: skewY(@y);
+  -webkit-backface-visibility: hidden;
+}

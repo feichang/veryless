@@ -1,0 +1,12 @@
+//**
+// * border-shadow
+// * @params	none | [inset? && [ <offset-x> <offset-y> <blur-radius>? <spread-radius>? <color>? ] ]#
+// *          none | [内映射? && [横向平移 纵向平移 模糊? 扩散? 颜色?]]#
+// * @author 飞长 <veryued@gmail.com>
+// */
+
+.box-shadow(@shadow: 5px 5px 10px #cccccc) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}

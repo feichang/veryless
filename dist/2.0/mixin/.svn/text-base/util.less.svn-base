@@ -1,0 +1,48 @@
+// =============================================
+// @des:      veryless util clearfix
+// @author:   feichang <veryued@gmail.com>
+// @url:      http://veryless.org
+// @time:     2013-02-28
+// =============================================
+
+.clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+// =============================================
+// @des:      veryless util retina image
+// @author:   feichang <veryued@gmail.com>
+// @url:      http://veryless.org
+// @time:     2013-02-28
+// 
+// Usage from preboot
+// .jumbotron {
+//   .retina-image("/img/bg-1x.png", "/img/bg-2x.png", 100px, 100px);
+// }
+// =============================================
+
+
+.retina-image(@file-1x, @file-2x, @width-1x, @height-1x) {
+  background-image: url("@{file-1x}");
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    background-image: url("@{file-2x}");
+    background-size: @width-1x @height-1x;
+  }
+}

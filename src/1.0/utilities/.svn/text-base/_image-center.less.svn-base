@@ -1,0 +1,50 @@
+//**
+// * image-center
+// * @author tangoboy <zhulutangoboy@gmail.com>
+// */
+// http://ued.taobao.com/blog/2007/10/22/css-notes-5/
+
+// 未知尺寸图片居中
+// 盒子 宽 高 
+.image-center(@width, @height){
+
+  @_fontsize: round(@height * 0.873);
+ 
+  width: ~'@{width}px';
+  height: ~'@{height}px';
+  overflow: hidden;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  
+  *display: block;//IE hack
+  *font: ~"@{_fontsize}px/1em Arial";
+  
+  img{
+    max-height: ~'@{height}px';
+    max-width: ~'@{width}px';
+    vertical-align: middle;
+  }
+}
+
+//盒子是正方形时 尺寸
+.image-center(@size){
+
+  @_fontsize: round(@size * 0.873);
+  
+  width: ~'@{size}px';
+  height: ~'@{size}px';
+  overflow: hidden;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  
+  *display: block;//IE hack
+  *font: ~"@{_fontsize}px/1em Arial";
+  
+  img{
+    max-height: ~'@{size}px';
+    max-width: ~'@{size}px';
+    vertical-align: middle;
+  }
+}

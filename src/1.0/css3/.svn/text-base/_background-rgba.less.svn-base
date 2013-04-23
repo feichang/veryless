@@ -1,0 +1,16 @@
+//**
+// * background-rgba
+// * @author tangoboy <zhulutangoboy@gmail.com>
+// */
+
+//背景色透明 rgba
+
+.background-rgba(@red, @green, @blue, @alpha:1){
+
+		@filtercolor:`(_f = function(d){ var v = (parseInt(d)|0).toString(16);return v.length<2 ? "0"+v : v;},
+						'#'+_f(@{alpha}*255) + _f(@{red}) + _f(@{green})+ _f(@{blue}))`;
+		
+		background-color: ~'rgba(@{red},@{green},@{blue},@{alpha})';
+    -ms-filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{filtercolor}',endColorstr='@{filtercolor}')";
+    filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{filtercolor}',endColorstr='@{filtercolor}')";	
+}

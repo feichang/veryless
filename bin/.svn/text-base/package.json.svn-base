@@ -1,0 +1,15 @@
+{
+  "author": "feichang <veryued@gmail.com> (http://veryued.org)",
+  "name": "veryless",
+  "description": "less extend mixins",
+  "version": "0.0.3",
+  "repository": {
+    "url": "https://github.com/feichang/veryless"
+  },
+  "bin": "veryless",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

@@ -1,0 +1,22 @@
+//**
+// * hyphens
+// * @author 飞长 <veryued@gmail.com>
+// * 可能存在问题
+// */
+
+.hyphens(@mode: auto) {
+  word-wrap: break-word;
+  -webkit-hyphens: @mode;
+     -moz-hyphens: @mode;
+      -ms-hyphens: @mode;
+       -o-hyphens: @mode;
+          hyphens: @mode;
+}
+.word-break(@word-break){
+  -ms-word-break: @word-break;
+    word-break: @word-break;
+}
+.hyphenation(){
+  .word-break(break-all);
+  .hyphens();
+}

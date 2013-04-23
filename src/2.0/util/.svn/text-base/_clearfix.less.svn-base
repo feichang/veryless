@@ -1,0 +1,21 @@
+// =============================================
+// @des:      veryless util clearfix
+// @author:   feichang <veryued@gmail.com>
+// @url:      http://veryless.org
+// @time:     2013-02-28
+// =============================================
+
+.clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}

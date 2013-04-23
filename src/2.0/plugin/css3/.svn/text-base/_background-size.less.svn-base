@@ -1,0 +1,12 @@
+//**
+// * background-size 背景尺寸
+// * @params	[ [ <length> | <percentage> | auto ]{1,2} | cover | contain ]#
+// * @author	飞长 <veryued@gmail.com>
+// */
+
+.background-size(@background-size: auto){
+	-moz-background-size: @background-size;
+	  -webkit-background-size: @background-size;
+	    -o-background-size: @background-size;
+	      background-size: @background-size;
+}

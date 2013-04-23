@@ -1,0 +1,16 @@
+// =============================================
+// @des:      css compatible function
+// @author:   feichang <veryued@gmail.com>
+// @url:      http://veryless.org
+// @time:     2013-02-28
+// =============================================
+
+//png24透明
+//.c-png24(#ccc, "http://taobao.com/logo.jpg");
+
+.c-png24(@color, @url){
+	background: @color url("@{url}") no-repeat 0 0;
+    _background: @color none;
+    filter: ~"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{url}', sizingMethod='scale')";
+}
+

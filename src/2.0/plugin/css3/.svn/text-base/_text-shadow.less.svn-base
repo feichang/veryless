@@ -1,0 +1,9 @@
+//**
+// * text-shadow
+// * @params	[ <color>? <offset-x> <offset-y> <blur-radius>? | <offset-x> <offset-y> <blur-radius>? <color>? ]
+// * @author 飞长 <veryued@gmail.com>
+//*/
+
+.text-shadow(@shadow: 5px 5px 5px #333){
+	text-shadow: @shadow;
+}

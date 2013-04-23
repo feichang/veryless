@@ -2,33 +2,44 @@
 
 //bin
 //@author feichang <veryued@gmail.com>
-var 
-  fs = require('fs'),
-	http = require('http'),
-  parr = process.argv,
-	folderPath = null,
-	len = 0;
+var fs = require('fs'),
+    https = require('https'),
+    argv = process.argv,
+    commend = argv[2],
+    folderPath = argv[3],
+    root = argv[4];
 
-parr.forEach(function (val, index, array) {
-  if(val == '-create'){
-  	folderPath = parr[index+1];
-  }
-});
+if(commend == '-init' && folderPath){
+    console.log('Init... Please wait for a moment!');
+    fs.mkdir(folderPath+'/veryless');
+    fs.mkdir(folderPath+'/veryless/plugin');
+    fs.mkdir(folderPath+'/less');
+    fs.mkdir(folderPath+'/css');
 
-fs.mkdir(folderPath+'/less');
-fs.mkdir(folderPath+'/css');
+    https.get("https://raw.github.com/feichang/veryless/master/dist/veryless-1.0.0.less", function(res) {
 
-http.get("http://veryless.googlecode.com/files/veryless.less", function(res) {
-  var ws = fs.createWriteStream(folderPath+'/veryless.less');
-  res.pipe(ws);
-}).on('error', function(e) {
-  console.log("Got error: " + e.message);
-});
+        var ws = fs.createWriteStream(folderPath+'/veryless/veryless.less');
+        res.pipe(ws);
+        console.log('Init success!');
+      
+    }).on('error', function(e) {
+      console.log("Got error: " + e.message);
+    });
+}else if(commend == '-use' && folderPath && root){
 
-http.get("http://veryless.googlecode.com/files/veryless-plugin.less", function(res) {
-  var ws = fs.createWriteStream(folderPath+'/veryless-plugin.less');
-  res.pipe(ws);
-  console.log('veryless create done');
-}).on('error', function(e) {
-  console.log("Got error: " + e.message);
-});
+    console.log('Download plugin... '+folderPath+' Please wait for a moment!');
+    https.get("https://raw.github.com/feichang/veryless/master/src/plugins/mixin/"+folderPath+".less", function(res) {
+
+        var ws = fs.createWriteStream(root+'/veryless/plugin/'+folderPath+'.less');
+        res.pipe(ws);
+        console.log('Download plugin success!');
+      
+    }).on('error', function(e) {
+      console.log("Got error: " + e.message);
+    });
+
+}else{
+    console.log('Usage: \n'+
+      ' Init & Download Veryless: veryless -init path (ex: veryless -init ./myfolder) \n'+
+      ' Download Veryless Plugin: veryless -use pluginname path (ex: veryless -use css3 ./myfolder) ');
+}
