@@ -13,6 +13,21 @@ VeryLess是基于LESS的Mixin扩展库,由LESS中国社区( http://lesscss.net/ 
 	初始化  目录: veryless -init ./myfolder
 	下载 Plugin: veryless -use pluginname ./myfolder
 
+
+	或者可以直接下载veryless.less到本地使用
+
+	例如：
+	
+		我的项目目录：/mysite
+		我的前端资源文件：/mysite/assets
+
+		sudo npm install -g veryless
+		cd /mysite
+		# 初始化 目录
+		veryless -init assets
+		# 下载Plugin css3
+		veryless -use css3 assets
+
 ## 分层说明
 
 *  Base        
