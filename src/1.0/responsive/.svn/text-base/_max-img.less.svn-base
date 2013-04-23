@@ -1,6 +1,0 @@
-.max-img(@width: 100%){
-	img{
-		max-width: @width;
-		_width: @width;
-	}
-}
