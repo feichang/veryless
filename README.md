@@ -28,6 +28,10 @@ VeryLess是基于LESS的Mixin扩展库,由LESS中国社区( http://lesscss.net/ 
 		# 下载Plugin css3
 		veryless -use css3 assets
 
+## API文档
+
+	https://github.com/feichang/veryless/tree/master/api
+
 ## 分层说明
 
 *  Base        
@@ -54,7 +58,7 @@ VeryLess是基于LESS的Mixin扩展库,由LESS中国社区( http://lesscss.net/ 
 
 ## Plugin介绍
 
-	VeryLess提供了Plugin概念，任何人都可以利用Veryless创建属于自己的plugin&使用plugin。
+VeryLess提供了Plugin概念，任何人都可以利用Veryless创建属于自己的plugin&使用plugin。
 
 ## 如何开发Plugin
 
