@@ -2,31 +2,32 @@
 http://veryless.org
 
 VeryLess是基于LESS的Mixin扩展库,由LESS中国社区( http://lesscss.net/ )发起。<br>
-提供一系列方法库。
+提供一系列方法库，帮助我们快速敏捷的编写样式。
 
 ## 使用方法
 	
+安装veryless
+	
 	npm install -g veryless
 
-	Usage:
+Usage:
 
 	初始化  目录: veryless -init ./myfolder
 	下载 Plugin: veryless -use pluginname ./myfolder
 
 
-	或者可以直接下载veryless.less到本地使用
+或者可以直接下载veryless.less到本地使用: https://github.com/feichang/veryless/blob/master/veryless.less
 
-	例如：
+举个栗子：
 	
-		我的项目目录：/mysite
-		我的前端资源文件：/mysite/assets
-
-		sudo npm install -g veryless
-		cd /mysite
-		# 初始化 目录
-		veryless -init assets
-		# 下载Plugin css3
-		veryless -use css3 assets
+	我的项目目录：/mysite
+	我的前端资源文件：/mysite/assets
+	sudo npm install -g veryless
+	cd /mysite
+	# 初始化 目录
+	veryless -init assets
+	# 下载Plugin css3
+	veryless -use css3 assets
 
 ## API文档
 
@@ -54,21 +55,19 @@ https://github.com/feichang/veryless/tree/master/api
 	
 	存放第三方插件，如[css3.less],[animation.less],[brand-color.less]
 
-可以看出VeryLess提供了一系列方法，帮助我们快速敏捷的编写样式。不久后将会提供一套漂亮的UI。
-
 ## Plugin介绍
 
 VeryLess提供了Plugin概念，任何人都可以利用Veryless创建属于自己的plugin&使用plugin。
 
 ## 如何开发Plugin
 
-	1, Fork veryless  https://github.com/feichang/veryless
+1, Fork veryless  https://github.com/feichang/veryless
 
-	2, 将自己的Plugin提交到fork到个人Github上的veryless中plugins文件夹中
+2, 将自己的Plugin提交到fork到个人Github上的veryless中plugins文件夹中
 
-	3, Pull request
+3, Pull request
 
-	4, 审核通过后，用户可以通过 veryless -use pluginname path 的方式使用
+4, 审核通过后，用户可以通过 veryless -use pluginname path 的方式使用
 
 ## 作者
 
