@@ -22,12 +22,12 @@ module.exports = function(grunt) {
                 ],
                 dest: 'veryless.less'
             },
-            plugin_exports: {
-                src: [
-                    'src/2.0/plugin/animation/*.less'
-                ],
-                dest: 'veryless-plugin.less'
-            },
+            // plugin_exports: {
+            //     src: [
+            //         'src/2.0/plugin/animation/*.less'
+            //     ],
+            //     dest: 'veryless-plugin.less'
+            // },
 
             //minxin
             base: {
@@ -60,10 +60,10 @@ module.exports = function(grunt) {
                 ],
                 dest: 'dist/2.0/mixin/layout.less'
             },
-            plugin: {
-                src: ['src/2.0/plugin/*/*.less'],
-                dest: 'dist/2.0/veryless-plugin.less'
-            },
+            // plugin: {
+            //     src: ['src/2.0/plugin/*/*.less'],
+            //     dest: 'dist/2.0/veryless-plugin.less'
+            // },
             css3: {
                 src: ['src/2.0/plugin/css3/*.less'],
                 dest: 'dist/2.0/plugin/css3.less'
