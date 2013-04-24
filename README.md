@@ -69,13 +69,19 @@ VeryLess提供了Plugin概念，任何人都可以利用Veryless创建属于自�
 
 4, 审核通过后，用户可以通过 veryless -use pluginname path 的方式使用
 
+## Plugin规范
+
+	/Plugins/yourplugin
+	index.less 这里存放plugin的所有代码（注意：一定要是index.less）
+	README.md  介绍你的plugin
+
 ## 作者
 
 * 飞长
 	* 微博：@非常长
 	* http://veryued.org
 
-## 贡献者
+## 开发者&贡献者
 
 * 飞长
 * TooBug
