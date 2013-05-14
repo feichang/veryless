@@ -1,0 +1,21 @@
+//**
+// * 
+// * Fluid Layout
+// * 
+// * @author 飞长 <veryued@gmail.com>
+// * 
+// */
+
+
+.makeWaterfall(@columnWidth: 300px){
+  
+  .fall (@columnWidth) {
+      .row-fall{
+        width:@columnWidth;
+      }
+  }
+
+  .fall{
+    .fall (@columnWidth);
+  }
+}
