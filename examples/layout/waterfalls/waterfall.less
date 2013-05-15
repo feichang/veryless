@@ -2,20 +2,39 @@
 // * 
 // * Fluid Layout
 // * 
-// * @author 飞长 <veryued@gmail.com>
+// * @author Moe <444984@qq.com>
 // * 
 // */
 
 
-.makeWaterfall(@columnWidth: 300px){
+.makeWaterfall(@containerWidth: 960px, @column: 3,@columnMargin: 10px){
+
+  @fallContainerWidth: @containerWidth;
+  @fallColumn:         @column;
+  @fallColumnMargin:   @columnMargin;
+  @columnWidth:        @fallContainerWidth/@fallColumn - (@column - 1) * @columnMargin;
   
-  .fall (@columnWidth) {
+  
+  .fall (@containerWidth,@column,@columnMargin) {
+
       .row-fall{
+        .clearfix();
         width:@columnWidth;
+        margin-left:@columnMargin;
+        float:left;
+      }
+      .first-column{
+        margin-left:0;
       }
   }
 
   .fall{
-    .fall (@columnWidth);
+    .fall(@fallContainerWidth,@fallColumn,@fallColumnMargin);
+     width:@containerWidth;
+  }
+  .fall:after{
+    content: " ";
+    clear:both;
+    display: block;
   }
 }
