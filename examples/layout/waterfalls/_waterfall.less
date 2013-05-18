@@ -1,0 +1,40 @@
+//**
+// * 
+// * Fluid Layout
+// * 
+// * @author Moe <444984@qq.com>
+// * 
+// */
+
+
+.makeWaterfall(@containerWidth: 960px, @column: 3,@columnMargin: 10px){
+
+  @fallContainerWidth: @containerWidth;
+  @fallColumn:         @column;
+  @fallColumnMargin:   @columnMargin;
+  @columnWidth:        @fallContainerWidth/@fallColumn - (@column - 1) * @columnMargin;
+  
+  
+  .fall (@containerWidth,@column,@columnMargin) {
+
+      .row-fall{
+        .clearfix();
+        width:@columnWidth;
+        margin-left:@columnMargin;
+        float:left;
+      }
+      .first-column{
+        margin-left:0;
+      }
+  }
+
+  .fall{
+    .fall(@fallContainerWidth,@fallColumn,@fallColumnMargin);
+     width:@containerWidth;
+  }
+  .fall:after{
+    content: " ";
+    clear:both;
+    display: block;
+  }
+}
