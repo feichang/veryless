@@ -1,11 +1,40 @@
 //**
-// *
-// * Waterfalls Layout
 // * 
-// * @author moe <444984@qq.com>
+// * Fluid Layout
+// * 
+// * @author Moe <444984@qq.com>
 // * 
 // */
 
-.makeFalls(@colums: 3, @columMaxHeight: 200px, @margin: 10px){
-	
+
+.makeWaterfall(@containerWidth: 960px, @column: 3,@columnMargin: 10px){
+
+  @fallContainerWidth: @containerWidth;
+  @fallColumn:         @column;
+  @fallColumnMargin:   @columnMargin;
+  @columnWidth:        @fallContainerWidth/@fallColumn - (@column - 1) * @columnMargin;
+  
+  
+  .fall (@containerWidth,@column,@columnMargin) {
+
+      .row-fall{
+        .clearfix();
+        width:@columnWidth;
+        margin-left:@columnMargin;
+        float:left;
+      }
+      .first-column{
+        margin-left:0;
+      }
+  }
+
+  .fall{
+    .fall(@fallContainerWidth,@fallColumn,@fallColumnMargin);
+     width:@containerWidth;
+  }
+  .fall:after{
+    content: " ";
+    clear:both;
+    display: block;
+  }
 }
