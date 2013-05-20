@@ -16,7 +16,7 @@ if(commend == '-init' && folderPath){
     fs.mkdir(folderPath+'/less');
     fs.mkdir(folderPath+'/css');
 
-    https.get("https://raw.github.com/feichang/veryless/master/dist/veryless-1.0.0.less", function(res) {
+    https.get("https://raw.github.com/feichang/veryless/master/dist/2.0/veryless.less", function(res) {
 
         var ws = fs.createWriteStream(folderPath+'/veryless/veryless.less');
         res.pipe(ws);
