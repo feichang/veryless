@@ -1,0 +1,34 @@
+// =============================================
+// @des:      veryless waterfall layout function
+// @author:   moe <444984@qq.com>
+// @url:      http://moejser.com
+// @time:     2013-05-20
+// =============================================
+
+
+.makeWaterfall(@containerWidth: 960px, @column: 3,@columnMargin: 10px){
+
+  @fallContainerWidth: @containerWidth;
+  @fallColumn:         @column;
+  @fallColumnMargin:   @columnMargin;
+  @columnWidth:        @fallContainerWidth/@fallColumn - (@column - 1) * @columnMargin;
+  
+  
+  .fall (@containerWidth,@column,@columnMargin) {
+      .row-fall{
+        .clearfix();
+        width:@columnWidth;
+        margin-left:@columnMargin;
+        float:left;
+      }
+      .first-column{
+        margin-left:0;
+      }
+  }
+
+  .fall{
+    .clearfix();
+    .fall(@fallContainerWidth,@fallColumn,@fallColumnMargin);
+    width:@containerWidth;
+  }
+}
