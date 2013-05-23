@@ -1,0 +1,402 @@
+//**
+// * background-clip 背景覆盖的位置
+// * @params  [ border-box || padding-box || content-box]
+// * @author 飞长 <veryued@gmail.com>
+// */
+
+.background-clip(@background-clip: border-box){
+	-moz-background-clip: @background-clip;
+	  -webkit-background-clip: @background-clip;
+		background-clip: @background-clip;
+}
+//**
+// * background-origin 背景开始的位置
+// * @params	[padding-box | border-box | content-box][, [border-box | padding-box | content-box]]*
+// * @author	飞长 <veryued@gmail.com>
+// */
+
+.background-origin(@background-origin: padding-box){
+	-moz-background-origin: @background-origin;
+	  -webkit-background-origin: @background-origin;
+	    background-origin: @background-origin;
+}
+//**
+// * background-rgba
+// * @author tangoboy <zhulutangoboy@gmail.com>
+// */
+
+//背景色透明 rgba
+
+.background-rgba(@red, @green, @blue, @alpha:1){
+
+		@filtercolor:`(_f = function(d){ var v = (parseInt(d)|0).toString(16);return v.length<2 ? "0"+v : v;},
+						'#'+_f(@{alpha}*255) + _f(@{red}) + _f(@{green})+ _f(@{blue}))`;
+		
+		background-color: ~'rgba(@{red},@{green},@{blue},@{alpha})';
+    -ms-filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{filtercolor}',endColorstr='@{filtercolor}')";
+    filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{filtercolor}',endColorstr='@{filtercolor}')";	
+}
+
+//**
+// * background-size 背景尺寸
+// * @params	[ [ <length> | <percentage> | auto ]{1,2} | cover | contain ]#
+// * @author	飞长 <veryued@gmail.com>
+// */
+
+.background-size(@background-size: auto){
+	-moz-background-size: @background-size;
+	  -webkit-background-size: @background-size;
+	    -o-background-size: @background-size;
+	      background-size: @background-size;
+}
+
+//**
+// * border-radius
+// * @author 飞长 <veryued@gmail.com>
+// */
+
+.border-radius(@radius: 5px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+//单角
+.border-top-left-radius(@radius: 5px) {
+  -webkit-border-top-left-radius: @radius;
+      -moz-border-radius-topleft: @radius;
+          border-top-left-radius: @radius;
+}
+.border-top-right-radius(@radius: 5px) {
+  -webkit-border-top-right-radius: @radius;
+      -moz-border-radius-topright: @radius;
+          border-top-right-radius: @radius;
+}
+.border-bottom-right-radius(@radius: 5px) {
+  -webkit-border-bottom-right-radius: @radius;
+      -moz-border-radius-bottomright: @radius;
+          border-bottom-right-radius: @radius;
+}
+.border-bottom-left-radius(@radius: 5px) {
+  -webkit-border-bottom-left-radius: @radius;
+      -moz-border-radius-bottomleft: @radius;
+          border-bottom-left-radius: @radius;
+}
+
+//单边
+.border-top-radius(@radius: 5px) {
+  .border-top-right-radius(@radius);
+  .border-top-left-radius(@radius);
+}
+.border-right-radius(@radius: 5px) {
+  .border-top-right-radius(@radius);
+  .border-bottom-right-radius(@radius);
+}
+.border-bottom-radius(@radius: 5px) {
+  .border-bottom-right-radius(@radius);
+  .border-bottom-left-radius(@radius);
+}
+.border-left-radius(@radius: 5px) {
+  .border-top-left-radius(@radius);
+  .border-bottom-left-radius(@radius);
+}
+//**
+// * border-shadow
+// * @params	none | [inset? && [ <offset-x> <offset-y> <blur-radius>? <spread-radius>? <color>? ] ]#
+// *          none | [内映射? && [横向平移 纵向平移 模糊? 扩散? 颜色?]]#
+// * @author 飞长 <veryued@gmail.com>
+// */
+
+.box-shadow(@shadow: 5px 5px 10px #cccccc) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+
+//**
+// * box-sizing 盒模型计算方式
+// * @params	content-box padding-box border-box       
+// * @author	飞长 <veryued@gmail.com>
+// */
+
+.box-sizing(@boxmodel: content-box) {
+  -webkit-box-sizing: @boxmodel;
+     -moz-box-sizing: @boxmodel;
+          box-sizing: @boxmodel;
+}
+
+//**
+// * column-count
+// * @type {[type]}
+// * @author 飞长 <veryued@gmail.com>
+// */
+.content-columns(@columnCount, @columnGap: @gridGutterWidth) {
+  -webkit-column-count: @columnCount;
+     -moz-column-count: @columnCount;
+          column-count: @columnCount;
+  -webkit-column-gap: @columnGap;
+     -moz-column-gap: @columnGap;
+          column-gap: @columnGap;
+}
+//**
+// * opacity
+// * @author 飞长 <veryued@gmail.com>
+// */
+
+.opacity(@opacity: 80) {
+  opacity: @opacity / 100;
+  filter: ~"alpha(opacity=@{opacity})";
+}
+//**
+// * resize
+// * @params	horizontal, vertical, both
+// * @author	飞长 <veryued@gmail.com>
+// */
+
+.resizable(@direction: both) {
+  resize: @direction;
+  overflow: auto; // Safari fix
+}
+
+//**
+// * text-shadow
+// * @params	[ <color>? <offset-x> <offset-y> <blur-radius>? | <offset-x> <offset-y> <blur-radius>? <color>? ]
+// * @author 飞长 <veryued@gmail.com>
+//*/
+
+.text-shadow(@shadow: 5px 5px 5px #333){
+	text-shadow: @shadow;
+}
+//**
+// * transformation 
+// * @params  
+// * @author  飞长 <veryued@gmail.com>
+// */
+
+//**
+// * transform: none
+// * transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0)
+// * transform: translate(12px, 50%)
+// * transform: translateX(2em)
+// * transform: translateY(3in)
+// * transform: scale(2, 0.5)
+// * transform: scaleX(2)
+// * transform: scaleY(0.5)
+// * transform: rotate(0.5turn)
+// * transform: skewX(30deg)
+// * transform: skewY(1.07rad)
+// * transform: matrix3d(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0)
+// * transform: translate3d(12px, 50%, 3em)
+// * transform: translateZ(2px)
+// * transform: scale3d(2.5, 1.2, 0.3)
+// * transform: scaleZ(0.3)
+// * transform: rotate3d(1, 2.0, 3.0, 10deg)
+// * transform: rotateX(10deg)
+// * transform: rotateY(10deg)
+// * transform: rotateZ(10deg)
+// * transform: perspective(17px)
+// * transform: translateX(10px) rotate(10deg) translateY(5px)
+// */
+
+.rotate(@degress: 0deg) {
+  -webkit-transform: rotate(@degress);
+     -moz-transform: rotate(@degress);
+      -ms-transform: rotate(@degress);
+       -o-transform: rotate(@degress);
+          transform: rotate(@degress);
+}
+.rotate3d(@x: 0, @y: 0, @z: 0, @degress: 0deg){
+  -webkit-transform: rotate3d(@arguments);
+     -moz-transform: rotate3d(@arguments);
+      -ms-transform: rotate3d(@arguments);
+       -o-transform: rotate3d(@arguments);
+          transform: rotate3d(@arguments);
+}
+.rotateX(@degress: 0deg){
+  -webkit-transform: rotateX(@arguments);
+     -moz-transform: rotateX(@arguments);
+      -ms-transform: rotateX(@arguments);
+       -o-transform: rotateX(@arguments);
+          transform: rotateX(@arguments);
+}
+.rotateY(@degress: 0deg){
+  -webkit-transform: rotateY(@arguments);
+     -moz-transform: rotateY(@arguments);
+      -ms-transform: rotateY(@arguments);
+       -o-transform: rotateY(@arguments);
+          transform: rotateY(@arguments);
+}
+.rotateZ(@degress: 0deg){
+  -webkit-transform: rotateZ(@arguments);
+     -moz-transform: rotateZ(@arguments);
+      -ms-transform: rotateZ(@arguments);
+       -o-transform: rotateZ(@arguments);
+          transform: rotateZ(@arguments);
+}
+
+//缩放
+.scale(@x:0, @y:0) {
+  -webkit-transform: scaleX(@x) scaleY(@y);
+     -moz-transform: scaleX(@x) scaleY(@y);
+      -ms-transform: scaleX(@x) scaleY(@y);
+       -o-transform: scaleX(@x) scaleY(@y);
+          transform: scaleX(@x) scaleY(@y);
+}
+.scaleX(@x: 0) {
+  -webkit-transform: scaleX(@arguments);
+     -moz-transform: scaleX(@arguments);
+      -ms-transform: scaleX(@arguments);
+       -o-transform: scaleX(@arguments);
+          transform: scaleX(@arguments);
+}
+.scaleY(@y: 0) {
+  -webkit-transform: scaleY(@arguments);
+     -moz-transform: scaleY(@arguments);
+      -ms-transform: scaleY(@arguments);
+       -o-transform: scaleY(@arguments);
+          transform: scaleY(@arguments);
+}
+
+//重定位元素
+.translate(@x: 0px, @y: 0px) {
+  -webkit-transform: translate(@arguments);
+     -moz-transform: translate(@arguments);
+      -ms-transform: translate(@arguments);
+       -o-transform: translate(@arguments);
+          transform: translate(@arguments);
+}
+.translate3d(@x: 0px, @y: 0px, @z: 0px) {
+  -webkit-transform: translate3d(@arguments);
+     -moz-transform: translate3d(@arguments);
+       -o-transform: translate3d(@arguments);
+          transform: translate3d(@arguments);
+}
+.translateX(@x: 0px){
+  -webkit-transform: translateX(@x);
+     -moz-transform: translateX(@x);
+      -ms-transform: translateX(@x);
+       -o-transform: translateX(@x);
+          transform: translateX(@x);
+}
+.translateY(@y: 0px){
+  -webkit-transform: translateY(@y);
+     -moz-transform: translateY(@y);
+      -ms-transform: translateY(@y);
+       -o-transform: translateY(@y);
+          transform: translateY(@y);
+}
+.translateZ(@z: 0px){
+  -webkit-transform: translateZ(@z);
+     -moz-transform: translateZ(@z);
+      -ms-transform: translateZ(@z);
+       -o-transform: translateZ(@z);
+          transform: translateZ(@z);
+}
+
+//倾斜
+.skew(@x: 0deg, @y: 0deg) {
+  -webkit-transform: skew(@arguments);
+     -moz-transform: skew(@arguments);
+      -ms-transform: skewX(@x) skewY(@y); 
+       -o-transform: skew(@arguments);
+          transform: skew(@arguments);
+  -webkit-backface-visibility: hidden;
+}
+.skewX(@x: 0deg) {
+  -webkit-transform: skewX(@x);
+     -moz-transform: skewX(@x);
+      -ms-transform: skewX(@x);
+       -o-transform: skewX(@x);
+          transform: skewX(@x);
+  -webkit-backface-visibility: hidden;
+  //Webkit gives a pixelated edge. This can be resolved by adding the following line to the mixin. -webkit-backface-visibility: hidden;
+}
+.skewY(@y: 0deg) {
+  -webkit-transform: skewY(@y);
+     -moz-transform: skewY(@y);
+      -ms-transform: skewY(@y); 
+       -o-transform: skewY(@y);
+          transform: skewY(@y);
+  -webkit-backface-visibility: hidden;
+}
+
+//**
+// * transition
+// * @params  [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'> 
+// *              [, [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'>]]*
+// * 详细可以查看 http://www.w3.org/TR/css3-transitions/
+// * @author 飞长 <veryued@gmail.com>
+// */
+
+
+.transition(@transition) {
+  -webkit-transition: @transition;
+    -moz-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
+
+//**
+// * 延迟时间
+// * @type {time} 如0s
+// */
+.transition-delay(@transition-delay: 0s) {
+  -webkit-transition-delay: @transition-delay;
+     -moz-transition-delay: @transition-delay;
+       -o-transition-delay: @transition-delay;
+          transition-delay: @transition-delay;
+}
+
+//**
+// * 持续时间
+// * @type {time} 如0s
+// */
+.transition-duration(@transition-duration: 0s){
+	-webkit-transition-duration: @transition-duration;
+     -moz-transition-duration: @transition-duration;
+       -o-transition-duration: @transition-duration;
+          transition-duration: @transition-duration;
+}
+
+//**
+// * 需要transition的属性
+// * @type: {css-property}
+// */
+.transition-property(@transition-property){
+  -webkit-transition-property: @transition-property;
+     -moz-transition-property: @transition-property;
+       -o-transition-property: @transition-property;
+          transition-property: @transition-property;
+}
+
+//**
+// * 时间函数
+// * @param  {
+// *         [ ease | linear | ease-in | ease-out | ease-in-out | step-start | step-end | 
+// *         steps(<integer>[, [ start | end ] ]?) | cubic-bezier(<number>, <number>, <number>, <number>) ] 
+// *         [, [ ease | linear | ease-in | ease-out | ease-in-out | step-start | step-end | 
+// *         steps(<number>[, [ start | end ] ]?) | cubic-bezier(<number>, <number>, <number>, <number>) ] ]*
+// * } 
+// * @transition-timing: ease          [description]
+// */
+.transition-timing-function(@transition-timing: ease){
+	-webkit-transition-timing-function: @transition-timing;
+     -moz-transition-timing-function: @transition-timing;
+       -o-transition-timing-function: @transition-timing;
+          transition-timing-function: @transition-timing;
+}
+
+
+//**
+// * user-select
+// * @params	none | text | all | element
+// * @author 飞长 <veryued@gmail.com>
+//*/
+
+.user-select(@select: auto) {
+  -webkit-user-select: @select;
+     -moz-user-select: @select;
+      -ms-user-select: @select;
+       -o-user-select: @select;
+          user-select: @select;
+}

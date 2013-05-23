@@ -1,0 +1,543 @@
+// =============================================
+// @des:      css reset function
+// @author:   feichang <veryued@gmail.com>
+// @url:      http://veryless.org
+// @time:     2013-02-28
+// =============================================
+
+// common reset use kissy reset
+// check it from yiminghe blog: http://yiminghe.iteye.com/blog/1606319
+.reset(){
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  nav,
+  section,
+  summary {
+    display: block;
+  }
+
+  audio,
+  canvas,
+  video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+  }
+
+  audio:not([controls]) {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  [hidden] {
+    display: none;
+  }
+
+  mark {
+    background: #ff0;
+    color: #333333;
+  }
+
+  figure {
+    margin: 1em 40px 1em 40px;
+  }
+
+  html {
+    font-size: 12px;
+
+    -webkit-text-size-adjust: 100%;
+
+    -ms-text-size-adjust: 100%;
+
+  }
+
+  html,
+  button,
+  input,
+  select,
+  textarea {
+    font-family: "tahoma, arial, \5b8b\4f53, sans-serif";
+  }
+  button,
+  input,
+  select,
+  textarea {
+    font-size: 100%;
+  }
+
+  body {
+    margin: 0;
+
+    color: #333333;
+    background-color: #ffffff;
+
+    line-height: 1.5;
+
+  }
+
+  a {
+    color: #0088cc;
+    text-decoration: none;
+  }
+  a:focus {
+    outline: thin dotted;
+  }
+  a:active,
+  a:hover {
+    outline: 0;
+  }
+  a:hover {
+    color: #005580;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+  }
+  h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+  }
+  h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+  }
+  h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+  }
+  h6 {
+    font-size: 0.75em;
+    margin: 2.33em 0;
+  }
+
+  abbr[title] {
+    border-bottom: 1px dotted;
+  }
+
+  b,
+  strong {
+    font-weight: bold;
+  }
+
+  blockquote {
+    margin: 1em 40px;
+  }
+
+  dfn {
+    font-style: italic;
+  }
+
+  p,
+  pre {
+    margin: 1em 0;
+  }
+
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: monospace, serif;
+
+    font-size: 1em;
+
+  }
+
+  pre {
+    white-space: pre;
+    white-space: pre-wrap;
+
+    word-wrap: break-word;
+  }
+  q {
+    quotes: none;
+  }
+
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+
+  small {
+    font-size: 75%;
+  }
+
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sup {
+    top: -0.5em;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+
+  dl,
+  menu,
+  ol,
+  ul {
+    margin: 1em 0;
+  }
+  dd {
+    margin: 0 0 0 40px;
+  }
+
+  menu,
+  ol,
+  ul {
+    padding: 0 0 0 40px;
+  }
+
+  img {
+    border: 0;
+
+    -ms-interpolation-mode: bicubic;
+
+  }
+
+  svg:not(:root) {
+    overflow: hidden;
+  }
+
+  form {
+    margin: 0;
+  }
+
+  fieldset {
+    border: 2px groove #f0f0f0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+  }
+
+  legend {
+    border: 0;
+
+    margin: 0;
+    padding: 0;
+    white-space: normal;
+
+    *margin-left: -7px;
+
+  }
+  button,
+  input,
+  select,
+  textarea {
+    margin: 0;
+    vertical-align: middle;
+  }
+
+  textarea {
+    overflow: auto;
+
+    vertical-align: top;
+
+  }
+
+  button {
+    padding: 0px 6px;
+
+    _padding: 0;
+  }
+
+  button,
+  input {
+    line-height: normal;
+  }
+
+  button,
+  html input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    -webkit-appearance: button;
+
+    cursor: pointer;
+
+    *overflow: visible;
+
+  }
+
+  button[disabled],
+  input[disabled] {
+    cursor: default;
+  }
+
+  button::-moz-focus-inner,
+  input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    box-sizing: border-box;
+
+
+    padding: 0;
+
+
+    *height: 13px;
+
+
+    *width: 13px;
+
+  }
+
+  input[type="search"] {
+    -webkit-appearance: textfield;
+
+    box-sizing: content-box;
+
+  }
+
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+}
+
+
+// --------------------------------------------------
+
+//display
+
+.display-b(){
+  display: block;
+}
+.display-i(){
+  display: inline;
+}
+.display-ib(){
+  display: inline-block;
+}
+//font family
+.font-fm(){
+  font-family: "Microsoft Yahei";
+}
+.font-fs(){
+  font-family: "SimSun";
+}
+.font-fa(){
+  font-family: "Arial";
+}
+
+//font weight
+.font-w700{
+  font-weight: 700;
+}
+.font-w400{
+  font-weight: 400;
+}
+
+//font size
+.font-s(@p: 12px){
+  font-size: @p;
+}
+.font-s1(){font-size: 1px;}
+.font-s2(){font-size: 2px;}
+.font-s3(){font-size: 3px;}
+.font-s4(){font-size: 4px;}
+.font-s5(){font-size: 5px;}
+.font-s6(){font-size: 6px;}
+.font-s7(){font-size: 7px;}
+.font-s8(){font-size: 8px;}
+.font-s9(){font-size: 9px;}
+.font-s10(){font-size: 10px;}
+.font-s11(){font-size: 11px;}
+.font-s12(){font-size: 12px;}
+.font-s13(){font-size: 13px;}
+.font-s14(){font-size: 14px;}
+.font-s15(){font-size: 15px;}
+.font-s16(){font-size: 16px;}
+.font-s17(){font-size: 17px;}
+.font-s18(){font-size: 18px;}
+.font-s19(){font-size: 19px;}
+.font-s20(){font-size: 20px;}
+.font-s21(){font-size: 21px;}
+.font-s22(){font-size: 22px;}
+.font-s23(){font-size: 23px;}
+.font-s24(){font-size: 24px;}
+.font-s25(){font-size: 25px;}
+.font-s26(){font-size: 26px;}
+.font-s27(){font-size: 27px;}
+.font-s28(){font-size: 28px;}
+.font-s29(){font-size: 29px;}
+.font-s30(){font-size: 30px;}
+.font-s31(){font-size: 31px;}
+.font-s32(){font-size: 32px;}
+.font-s33(){font-size: 33px;}
+.font-s34(){font-size: 34px;}
+.font-s35(){font-size: 35px;}
+.font-s36(){font-size: 36px;}
+.font-s37(){font-size: 37px;}
+.font-s38(){font-size: 38px;}
+.font-s39(){font-size: 39px;}
+.font-s40(){font-size: 40px;}
+.font-s41(){font-size: 41px;}
+.font-s42(){font-size: 42px;}
+.font-s43(){font-size: 43px;}
+.font-s44(){font-size: 44px;}
+.font-s45(){font-size: 45px;}
+.font-s46(){font-size: 46px;}
+.font-s47(){font-size: 47px;}
+.font-s48(){font-size: 48px;}
+.font-s49(){font-size: 49px;}
+.font-s50(){font-size: 50px;}
+.font-s51(){font-size: 51px;}
+.font-s52(){font-size: 52px;}
+.font-s53(){font-size: 53px;}
+.font-s54(){font-size: 54px;}
+.font-s55(){font-size: 55px;}
+.font-s56(){font-size: 56px;}
+.font-s57(){font-size: 57px;}
+.font-s58(){font-size: 58px;}
+.font-s59(){font-size: 59px;}
+.font-s60(){font-size: 60px;}
+.font-s61(){font-size: 61px;}
+.font-s62(){font-size: 62px;}
+.font-s63(){font-size: 63px;}
+.font-s64(){font-size: 64px;}
+.font-s65(){font-size: 65px;}
+.font-s66(){font-size: 66px;}
+.font-s67(){font-size: 67px;}
+.font-s68(){font-size: 68px;}
+.font-s69(){font-size: 69px;}
+.font-s70(){font-size: 70px;}
+.font-s71(){font-size: 71px;}
+.font-s72(){font-size: 72px;}
+.font-s73(){font-size: 73px;}
+.font-s74(){font-size: 74px;}
+.font-s75(){font-size: 75px;}
+.font-s76(){font-size: 76px;}
+.font-s77(){font-size: 77px;}
+.font-s78(){font-size: 78px;}
+.font-s79(){font-size: 79px;}
+.font-s80(){font-size: 80px;}
+.font-s81(){font-size: 81px;}
+.font-s82(){font-size: 82px;}
+.font-s83(){font-size: 83px;}
+.font-s84(){font-size: 84px;}
+.font-s85(){font-size: 85px;}
+.font-s86(){font-size: 86px;}
+.font-s87(){font-size: 87px;}
+.font-s88(){font-size: 88px;}
+.font-s89(){font-size: 89px;}
+.font-s90(){font-size: 90px;}
+.font-s91(){font-size: 91px;}
+.font-s92(){font-size: 92px;}
+.font-s93(){font-size: 93px;}
+.font-s94(){font-size: 94px;}
+.font-s95(){font-size: 95px;}
+.font-s96(){font-size: 96px;}
+.font-s97(){font-size: 97px;}
+.font-s98(){font-size: 98px;}
+.font-s99(){font-size: 99px;}
+.font-s100(){font-size: 100px;}
+
+//list
+
+.list-sn(){
+  list-style: none;
+}
+//text
+.text-n(@p: none){
+  text-decoration: @p;
+}
+.text-c(){
+  text-align: center;
+}
+.text-l(){
+  text-align: left;
+}
+.text-r(){
+  text-align: right;
+}
+// =============================================
+// @des:      css compatible function
+// @author:   feichang <veryued@gmail.com>
+// @url:      http://veryless.org
+// @time:     2013-02-28
+// =============================================
+
+//png24透明
+//.c-png24(#ccc, "http://taobao.com/logo.jpg");
+
+.c-png24(@color, @url){
+	background: @color url("@{url}") no-repeat 0 0;
+    _background: @color none;
+    filter: ~"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{url}', sizingMethod='scale')";
+}
+
+
+// =============================================
+// @des:      veryless util clearfix
+// @author:   feichang <veryued@gmail.com>
+// @url:      http://veryless.org
+// @time:     2013-02-28
+// =============================================
+
+.clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+// =============================================
+// @des:      veryless util retina image
+// @author:   feichang <veryued@gmail.com>
+// @url:      http://veryless.org
+// @time:     2013-02-28
+// 
+// Usage from preboot
+// .jumbotron {
+//   .retina-image("/img/bg-1x.png", "/img/bg-2x.png", 100px, 100px);
+// }
+// =============================================
+
+
+.retina-image(@file-1x, @file-2x, @width-1x, @height-1x) {
+  background-image: url("@{file-1x}");
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    background-image: url("@{file-2x}");
+    background-size: @width-1x @height-1x;
+  }
+}
+
+
