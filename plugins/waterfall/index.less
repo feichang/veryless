@@ -35,12 +35,12 @@
     .span{
       background: #efefef;
       margin:0 0 10px 0;
-      padding: @columnPadding;
+      
       border: 1px #D4D4D4 solid;
     }
     .span img{
       max-width: 100%;
-      *width: expression((this.width > @containerWidth) ? "300px" : "auto" ); 
+      width: (@columnWidth - (@columnPadding*2)) ~"\9";
     }
   }
 }
