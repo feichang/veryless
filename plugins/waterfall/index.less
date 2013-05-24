@@ -12,7 +12,7 @@
   @fallColumn:         @column;
   @fallColumnMargin:   @columnMargin;
   @fallColumnPadding:  @columnPadding;
-  @columnWidth:        (@fallContainerWidth/@fallColumn - (@column - 1) * @columnMargin - @columnPadding * 2);
+  @columnWidth:        ((@fallContainerWidth - (@columnMargin * (@fallColumn - 1))) / @fallColumn);
   
   
   .vl-waterfall (@containerWidth,@column,@columnMargin) {
@@ -35,7 +35,7 @@
     .span{
       background: #efefef;
       margin:0 0 10px 0;
-      
+      padding: @columnPadding;
       border: 1px #D4D4D4 solid;
     }
     .span img{

@@ -12,7 +12,7 @@
   @fallColumn:         @column;
   @fallColumnMargin:   @columnMargin;
   @fallColumnPadding:  @columnPadding;
-  @columnWidth:        (@fallContainerWidth/@fallColumn - (@column - 1) * @columnMargin - @columnPadding * 2);
+  @columnWidth:        ((@fallContainerWidth - (@columnMargin * (@fallColumn - 1))) / @fallColumn);
   
   
   .vl-waterfall (@containerWidth,@column,@columnMargin) {
