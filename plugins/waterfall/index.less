@@ -40,6 +40,7 @@
     }
     .span img{
       max-width: 100%;
+      *width: expression((this.width > @containerWidth) ? "300px" : "auto" ); 
     }
   }
 }
