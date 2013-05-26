@@ -12,13 +12,13 @@
   @fallColumn:         @column;
   @fallColumnMargin:   @columnMargin;
   @fallColumnPadding:  @columnPadding;
-  @columnWidth:        ((@fallContainerWidth - (@columnMargin * (@fallColumn - 1))) / @fallColumn);
-  
+  @columnWidth:        floor(((@fallContainerWidth - (@columnMargin * (@fallColumn - 1)))/@fallColumn));
+  @widthForIe6:        floor((((@fallContainerWidth - (@columnMargin * (@fallColumn - 1)))/@fallColumn - @columnPadding * 2)));
   
   .vl-waterfall (@containerWidth,@column,@columnMargin) {
       .row-fall{
         .clearfix();
-        width:@columnWidth;
+        width: @columnWidth;
         margin-left:@columnMargin;
         float:left;
       }
@@ -40,7 +40,8 @@
     }
     .span img{
       max-width: 100%;
-      width: (@columnWidth - (@columnPadding*2)) ~"\9";
+ 
+      _width: (@widthForIe6 - @columnPadding);
     }
   }
 }
