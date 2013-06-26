@@ -37,11 +37,12 @@
           transform: rotate(@degress);
 }
 .rotate3d(@x: 0, @y: 0, @z: 0, @degress: 0deg){
-  -webkit-transform: rotate3d(@arguments);
-     -moz-transform: rotate3d(@arguments);
-      -ms-transform: rotate3d(@arguments);
-       -o-transform: rotate3d(@arguments);
-          transform: rotate3d(@arguments);
+  @arguments-list: @x, @y, @z, @degress;
+  -webkit-transform: rotate3d(@arguments-list);
+     -moz-transform: rotate3d(@arguments-list);
+      -ms-transform: rotate3d(@arguments-list);
+       -o-transform: rotate3d(@arguments-list);
+          transform: rotate3d(@arguments-list);
 }
 .rotateX(@degress: 0deg){
   -webkit-transform: rotateX(@arguments);
@@ -90,17 +91,19 @@
 
 //重定位元素
 .translate(@x: 0px, @y: 0px) {
-  -webkit-transform: translate(@arguments);
-     -moz-transform: translate(@arguments);
-      -ms-transform: translate(@arguments);
-       -o-transform: translate(@arguments);
-          transform: translate(@arguments);
+  @arguments-list: @x, @y;
+  -webkit-transform: translate(@arguments-list);
+     -moz-transform: translate(@arguments-list);
+      -ms-transform: translate(@arguments-list);
+       -o-transform: translate(@arguments-list);
+          transform: translate(@arguments-list);
 }
 .translate3d(@x: 0px, @y: 0px, @z: 0px) {
-  -webkit-transform: translate3d(@arguments);
-     -moz-transform: translate3d(@arguments);
-       -o-transform: translate3d(@arguments);
-          transform: translate3d(@arguments);
+  @arguments-list: @x, @y, @z;
+  -webkit-transform: translate3d(@arguments-list);
+     -moz-transform: translate3d(@arguments-list);
+       -o-transform: translate3d(@arguments-list);
+          transform: translate3d(@arguments-list);
 }
 .translateX(@x: 0px){
   -webkit-transform: translateX(@x);
@@ -126,11 +129,12 @@
 
 //倾斜
 .skew(@x: 0deg, @y: 0deg) {
-  -webkit-transform: skew(@arguments);
-     -moz-transform: skew(@arguments);
+  @arguments-list: @x, @y;
+  -webkit-transform: skew(@arguments-list);
+     -moz-transform: skew(@arguments-list);
       -ms-transform: skewX(@x) skewY(@y); 
-       -o-transform: skew(@arguments);
-          transform: skew(@arguments);
+       -o-transform: skew(@arguments-list);
+          transform: skew(@arguments-list);
   -webkit-backface-visibility: hidden;
 }
 .skewX(@x: 0deg) {
