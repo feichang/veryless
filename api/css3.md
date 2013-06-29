@@ -127,12 +127,12 @@ Animation来源于animation.css，提供了很多动画效果,使用方法请参
 	* 默认参数 5px 5px 5px #333
 
 ## transform
-* .rotate(@degress: 0deg); 
+* .rotate(@degrees: 0deg); 
 	* 旋转
-* .rotate3d(@x: 0, @y: 0, @z: 0, @degress: 0deg);
-* .rotateX(@degress: 0deg);
-* .rotateY(@degress: 0deg);
-* .rotateZ(@degress: 0deg);
+* .rotate3d(@x: 0, @y: 0, @z: 0, @degrees: 0deg);
+* .rotateX(@degrees: 0deg);
+* .rotateY(@degrees: 0deg);
+* .rotateZ(@degrees: 0deg);
 * .scale(@x:0, @y:0);
 	* 缩放
 * .scaleX(@x: 0);
