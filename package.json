@@ -1,9 +1,7 @@
 {
   "name": "veryless",
-  "version": "0.2.0",
+  "version": "2.0.1",
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.1.1",
-    "grunt-contrib-nodeunit": "~0.1.2"
+    "grunt": "~0.4.0"
   }
 }
