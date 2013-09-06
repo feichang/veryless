@@ -3,81 +3,63 @@ module.exports = function(grunt) {
 		concat: {
 		    veryless: {
 		    	src: [
-                    'src/2.0/base/*.less',
-                    'src/2.0/shortcut/*.less',
-                    'src/2.0/compatible/*.less',
-                    'src/2.0/util/*.less',
-                    'src/2.0/layout/*.less'
+                    'src/base/*.less',
+                    'src/shortcut/*.less',
+                    'src/compatible/*.less',
+                    'src/util/*.less',
+                    'src/layout/*.less'
                 ],
-		    	dest: 'dist/2.0/veryless.less'
+		    	dest: 'dist/veryless.less'
 		    },
-
-            veryless_exports: {
-                src: [
-                    'src/2.0/base/*.less',
-                    'src/2.0/shortcut/*.less',
-                    'src/2.0/compatible/*.less',
-                    'src/2.0/util/*.less',
-                    'src/2.0/layout/*.less'
-                ],
-                dest: 'veryless.less'
-            },
-            // plugin_exports: {
-            //     src: [
-            //         'src/2.0/plugin/animation/*.less'
-            //     ],
-            //     dest: 'veryless-plugin.less'
-            // },
 
             //minxin
             base: {
                 src: [
-                    'src/2.0/base/*.less'
+                    'src/base/*.less'
                 ],
-                dest: 'dist/2.0/mixin/base.less'
+                dest: 'dist/mixin/base.less'
             },
             shortcut: {
                 src: [
-                    'src/2.0/shortcut/*.less'
+                    'src/shortcut/*.less'
                 ],
-                dest: 'dist/2.0/mixin/shortcut.less'
+                dest: 'dist/mixin/shortcut.less'
             },
             compatible: {
                 src: [
-                    'src/2.0/compatible/*.less'
+                    'src/compatible/*.less'
                 ],
-                dest: 'dist/2.0/mixin/compatible.less'
+                dest: 'dist/mixin/compatible.less'
             },
             util: {
                 src: [
-                    'src/2.0/util/*.less'
+                    'src/util/*.less'
                 ],
-                dest: 'dist/2.0/mixin/util.less'
+                dest: 'dist/mixin/util.less'
             },
             layout: {
                 src: [
-                    'src/2.0/layout/*.less'
+                    'src/layout/*.less'
                 ],
-                dest: 'dist/2.0/mixin/layout.less'
+                dest: 'dist/mixin/layout.less'
             },
-            // plugin: {
-            //     src: ['src/2.0/plugin/*/*.less'],
-            //     dest: 'dist/2.0/veryless-plugin.less'
-            // },
             css3: {
-                src: ['src/2.0/plugin/css3/*.less'],
-                dest: 'dist/2.0/plugin/css3.less'
+                src: ['src/plugin/css3/*.less'],
+                dest: 'dist/plugin/css3.less'
             },
             brandcolor: {
-                src: ['src/2.0/plugin/brand-color/*.less'],
-                dest: 'dist/2.0/plugin/brandcolor.less'
+                src: ['src/plugin/brand-color/*.less'],
+                dest: 'dist/plugin/brandcolor.less'
             },
             animation: {
-                src: ['src/2.0/plugin/animation/*.less'],
-                dest: 'dist/2.0/plugin/animation.less'
+                src: ['src/plugin/animation/*.less'],
+                dest: 'dist/plugin/animation.less'
             }
 		}
 	});
+
+    
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
 	grunt.registerTask('default', 'concat');
 };

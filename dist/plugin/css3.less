@@ -51,6 +51,21 @@
 }
 
 //**
+// * border-image
+// * @params <'border-image-source'> || <'border-image-slice'> 
+// * [ / <'border-image-width'> | / <'border-image-width'>? / <'border-image-outset'> ]? || <'border-image-repeat'>
+// * @author 飞长 <veryued@gmail.com>
+// * 存在问题
+// */
+
+.border-image(@url, @width, @repeat){
+	border: '@{width} solid transparent';
+      -moz-border-image:'url(@{url}) @width @width @repeat'; 
+    	-webkit-border-image:'url(@{url}) @width @width @repeat'; 
+    	  -o-border-image:'url(@{url}) @width @width @repeat'; 
+    		border-image:'url(@{url}) @width @width @repeat';
+}
+//**
 // * border-radius
 // * @author 飞长 <veryued@gmail.com>
 // */
@@ -139,6 +154,59 @@
           column-gap: @columnGap;
 }
 //**
+// * font-face 自定义字体
+// * @params	@path: 字体路径; @font-name: 字体名字; 需要同时存在eot woff ttf svg
+// * @author 飞长 <veryued@gmail.com>
+// */
+
+.font-face(@path, @font-name){
+	@font-face{
+		font-family: @font-name;
+		src: url('@path/@{font-name}.eot'); /* IE9 Compat Modes */
+		src: url('@path/@{font-name}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		     url('@path/@{font-name}.woff') format('woff'), /* Modern Browsers */
+		     url('@path/@{font-name}.ttf')  format('truetype'), /* Safari, Android, iOS */
+		     url('@path/@{font-name}.svg#svgFontName') format('svg'); /* Legacy iOS */
+	}
+}
+
+//**
+// * hyphens
+// * @author 飞长 <veryued@gmail.com>
+// * 可能存在问题
+// */
+
+.hyphens(@mode: auto) {
+  word-wrap: break-word;
+  -webkit-hyphens: @mode;
+     -moz-hyphens: @mode;
+      -ms-hyphens: @mode;
+       -o-hyphens: @mode;
+          hyphens: @mode;
+}
+.word-break(@word-break){
+  -ms-word-break: @word-break;
+    word-break: @word-break;
+}
+.hyphenation(){
+  .word-break(break-all);
+  .hyphens();
+}
+.linear-gradient(@startColor,@endColor){
+
+	@argbStartColor:argb(@startColor);
+	@argbEndColor:argb(@endColor);
+
+	background-image: -moz-linear-gradient(top,@startColor,@endColor);  /* FF3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, @startColor, @endColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image: -ms-linear-gradient(top,@startColor,@endColor); /* IE10 */
+	background-image: -o-linear-gradient(top,@startColor,@endColor); /* Opera 11.10+ */
+	background-image: linear-gradient(top, @startColor, @endColor);
+	filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{argbStartColor},endColors=@{argbEndColor})";
+	
+}
+//**
 // * opacity
 // * @author 飞长 <veryued@gmail.com>
 // */
@@ -161,11 +229,15 @@
 //**
 // * text-shadow
 // * @params	[ <color>? <offset-x> <offset-y> <blur-radius>? | <offset-x> <offset-y> <blur-radius>? <color>? ]
+// * 支持多重阴影
 // * @author 飞长 <veryued@gmail.com>
 //*/
 
 .text-shadow(@shadow: 5px 5px 5px #333){
 	text-shadow: @shadow;
+}
+.text-shadow(@shadow: 5px 5px 5px #333, @rest...){
+	text-shadow: @shadow, @rest;
 }
 //**
 // * transformation 

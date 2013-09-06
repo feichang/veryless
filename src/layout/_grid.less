@@ -1,11 +1,11 @@
 // =============================================
-// @des:      veryless metro grid function
+// @des:      veryless grid function
 // @author:   feichang <veryued@gmail.com>
 // @url:      http://veryless.org
 // @time:     2013-02-28
 // =============================================
 
-.makeMetro(@colnum: 6, @colwidth: 150px, @margin: 10px){
+.makeGrid(@colnum: 24, @colwidth: 30px, @margin: 10px){
   
   @gridColumns:             @colnum;
   @gridColumnWidth:         @colwidth;
@@ -13,20 +13,15 @@
   @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 
 
-  .metroX (@gridColumnWidth, @gridGutterWidth) {
+  .gridX (@gridColumnWidth, @gridGutterWidth) {
     .spanX (@index) when (@index > 0) {
-      (~".span@{index}") { .span(@index); }
+      .span@{index} { .span(@index); }
       .spanX(@index - 1);
     }
     .spanX (0) {}
-    .lineX (@index) when (@index > 0) {
-      (~".line@{index}") { .line(@index); }
-      .lineX(@index - 1);
-    }
-    .lineX (0) {}
 
     .offsetX (@index) when (@index > 0) {
-      (~".offset@{index}") { .offset(@index); }
+      .offset@{index} { .offset(@index); }
       .offsetX(@index - 1);
     }
     .offsetX (0) {}
@@ -37,10 +32,6 @@
 
     .span (@columns) {
       width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
-    }
-    .line (@columns){
-      height: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
-      margin-bottom: @margin;
     }
 
     .row {
@@ -56,12 +47,11 @@
 
     // generate .spanX and .offsetX
     .spanX (@gridColumns);
-    .lineX (@gridColumns);
     .offsetX (@gridColumns);
 
   }
-  .vl-metro{
-    .metroX(@gridColumnWidth, @gridGutterWidth);
+  .vl-grid{
+    .gridX(@gridColumnWidth, @gridGutterWidth);
   }
 
 }

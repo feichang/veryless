@@ -1,0 +1,14 @@
+.linear-gradient(@startColor,@endColor){
+
+	@argbStartColor:argb(@startColor);
+	@argbEndColor:argb(@endColor);
+
+	background-image: -moz-linear-gradient(top,@startColor,@endColor);  /* FF3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, @startColor, @endColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image: -ms-linear-gradient(top,@startColor,@endColor); /* IE10 */
+	background-image: -o-linear-gradient(top,@startColor,@endColor); /* Opera 11.10+ */
+	background-image: linear-gradient(top, @startColor, @endColor);
+	filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{argbStartColor},endColors=@{argbEndColor})";
+	
+}
