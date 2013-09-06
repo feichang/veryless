@@ -1,0 +1,15 @@
+//**
+// * border-image
+// * @params <'border-image-source'> || <'border-image-slice'> 
+// * [ / <'border-image-width'> | / <'border-image-width'>? / <'border-image-outset'> ]? || <'border-image-repeat'>
+// * @author 飞长 <veryued@gmail.com>
+// * 存在问题
+// */
+
+.border-image(@url, @width, @repeat){
+	border: '@{width} solid transparent';
+      -moz-border-image:'url(@{url}) @width @width @repeat'; 
+    	-webkit-border-image:'url(@{url}) @width @width @repeat'; 
+    	  -o-border-image:'url(@{url}) @width @width @repeat'; 
+    		border-image:'url(@{url}) @width @width @repeat';
+}

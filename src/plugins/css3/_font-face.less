@@ -1,0 +1,16 @@
+//**
+// * font-face 自定义字体
+// * @params	@path: 字体路径; @font-name: 字体名字; 需要同时存在eot woff ttf svg
+// * @author 飞长 <veryued@gmail.com>
+// */
+
+.font-face(@path, @font-name){
+	@font-face{
+		font-family: @font-name;
+		src: url('@path/@{font-name}.eot'); /* IE9 Compat Modes */
+		src: url('@path/@{font-name}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		     url('@path/@{font-name}.woff') format('woff'), /* Modern Browsers */
+		     url('@path/@{font-name}.ttf')  format('truetype'), /* Safari, Android, iOS */
+		     url('@path/@{font-name}.svg#svgFontName') format('svg'); /* Legacy iOS */
+	}
+}

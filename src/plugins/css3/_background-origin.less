@@ -1,0 +1,11 @@
+//**
+// * background-origin 背景开始的位置
+// * @params	[padding-box | border-box | content-box][, [border-box | padding-box | content-box]]*
+// * @author	飞长 <veryued@gmail.com>
+// */
+
+.background-origin(@background-origin: padding-box){
+	-moz-background-origin: @background-origin;
+	  -webkit-background-origin: @background-origin;
+	    background-origin: @background-origin;
+}
