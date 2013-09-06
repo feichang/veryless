@@ -1,0 +1,11 @@
+//**
+// * background-clip 背景覆盖的位置
+// * @params  [ border-box || padding-box || content-box]
+// * @author 飞长 <veryued@gmail.com>
+// */
+
+.background-clip(@background-clip: border-box){
+	-moz-background-clip: @background-clip;
+	  -webkit-background-clip: @background-clip;
+		background-clip: @background-clip;
+}
