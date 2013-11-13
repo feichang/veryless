@@ -1,22 +1,22 @@
 {
     "plugins": [{
         "url": "https://raw.github.com/feichang/veryless/master/plugins/css3/index.less",
-        "desc": "CSS3插件",
+        "name": "css3",
         "author": "飞长",
         "email": "veryued@gmail.com"
     },{
         "url": "https://raw.github.com/feichang/veryless/master/plugins/animation/index.less",
-        "desc": "Animation插件",
+        "name": "animation",
         "author": "飞长",
         "email": "veryued@gmail.com"
     },{
         "url": "https://github.com/feichang/veryless/blob/master/plugins/brand-color/index.less",
-        "desc": "颜色插件",
+        "name": "brandColor",
         "author": "飞长",
         "email": "veryued@gmail.com"
     },{
         "url": "https://raw.github.com/feichang/veryless/master/plugins/waterfall/index.less",
-        "desc": "瀑布流插件",
+        "desc": "waterflow",
         "author": "moe",
         "email": "444984@qq.com"
     }]
