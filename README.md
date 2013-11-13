@@ -13,7 +13,10 @@ VeryLess是基于LESS的Mixin扩展库,由LESS中国社区( http://lesscss.net/ 
 Usage:
 
 	初始化  目录: veryless -init ./myfolder
-	下载 Plugin: veryless -use pluginname ./myfolder
+	下载 Plugin:
+	cd myfolder
+	veryless -use pluginname
+	就会下载对应的插件到 ./myfolder/veryless/pulgins/里
 
 
 或者可以直接下载veryless.less到本地使用: https://github.com/feichang/veryless/blob/master/veryless.less
@@ -117,6 +120,6 @@ VeryLess提供了Plugin概念，任何人都可以利用Veryless创建属于自�
 * 描述：瀑布流布局
 * 文档地址：https://github.com/feichang/veryless/tree/master/plugins/waterfall
 * 作者：moe
-* 微博：
-* blog
+* 微博：@刘剑锋_moe
+* blog: www.moejser.com
 * github: https://github.com/fengliu222

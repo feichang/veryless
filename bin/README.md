@@ -4,6 +4,6 @@ veryless.org
 
 ### Usage
 
-	Init & Download Veryless: veryless -init path (ex: veryless -init ./myfolder)
-	
-	Download Veryless Plugin: veryless -use pluginname path (ex: veryless -use css3 ./myfolder)
+	Init & Download Veryless: veryless -init ./myfolder
+
+    Download Veryless Plugin: cd ./myfolder & veryless -use pluginname (ex: veryless -use css3)
