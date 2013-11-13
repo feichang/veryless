@@ -12,10 +12,11 @@ VeryLess是基于LESS的Mixin扩展库,由LESS中国社区( http://lesscss.net/ 
 
 Usage:
 
-	初始化  目录: veryless -init ./myfolder
-	下载 Plugin:
-	cd myfolder
-	veryless -use pluginname
+	初始化目录:
+	    veryless -init ./myfolder
+	下载Plugin:
+	    cd ./myfolder
+	    veryless -use pluginname
 	就会下载对应的插件到 ./myfolder/veryless/pulgins/里
 
 
@@ -25,12 +26,14 @@ Usage:
 	
 	我的项目目录：/mysite
 	我的前端资源文件：/mysite/assets
+	我想把veryless放到 /mysite/assets/lib/ 里面
 	sudo npm install -g veryless
-	cd /mysite
+	cd /mysite/assets/
 	# 初始化 目录
-	veryless -init assets
+	veryless -init lib
 	# 下载Plugin css3
-	veryless -use css3 assets
+	cd lib
+	veryless -use css3
 
 ## API文档
 
