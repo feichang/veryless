@@ -19,11 +19,8 @@ Usage:
 	    veryless -use pluginname
 	就会下载对应的插件到 ./myfolder/veryless/pulgins/里
 
-
-或者可以直接下载veryless.less到本地使用: https://github.com/feichang/veryless/blob/master/veryless.less
-
 举个栗子：
-	
+
 	我的项目目录：/mysite
 	我的前端资源文件：/mysite/assets
 	我想把veryless放到 /mysite/assets/lib/ 里面
@@ -34,6 +31,8 @@ Usage:
 	# 下载Plugin css3
 	cd lib
 	veryless -use css3
+
+或者可以直接下载veryless.less到本地使用: https://github.com/feichang/veryless/blob/master/veryless.less
 
 ## API文档
 
@@ -57,9 +56,6 @@ https://github.com/feichang/veryless/tree/master/api
 *  Shortcut
 
 	提供常用的快捷写法，如font-size: 12px; 可以写成： .font-s12;或者 .font-s(12px);
-*  Plugin
-	
-	存放第三方插件，如[css3.less],[animation.less],[brand-color.less]
 
 ## Plugin介绍
 
@@ -67,19 +63,26 @@ VeryLess提供了Plugin概念，任何人都可以利用Veryless创建属于自�
 
 ## 如何开发Plugin
 
-1, Fork veryless  https://github.com/feichang/veryless
+1, 开发好插件存到github上，目录规范请看下面
 
-2, 将自己的Plugin提交到fork到个人Github上的veryless中plugins文件夹中
+2, 到这里（https://github.com/feichang/veryless/issues?state=open）新建一个issue，命名规范：［添加插件］插件名
+   内容填写如下：
+   * 插件名字（英文）
+   * 描述：插件简要描述
+   * 文档地址：插件的文档地址
+   * 插件url: 插件下载地址，如果你存放在github上，地址如 https://raw.github.com/feichang/veryless/master/plugins/css3/index.less
+   * 微博：你的微博名称 如 @非常长
+   * blog: 你的博客地址，如果有请填写
+   * github: 你的github地址，如果有请填写
 
-3, Pull request
-
-4, 审核通过后，用户可以通过 veryless -use pluginname path 的方式使用
+3，我看到issue后会更新根目录中的plugins.json 用户就可以像这样使用你的插件了 veryless -use yourpluginname
 
 ## Plugin规范
 
-	/Plugins/yourplugin
-	index.less 这里存放plugin的所有代码（注意：一定要是index.less）
-	README.md  介绍你的plugin
+	/YourPluginName
+	    - index.less 这里存放plugin的所有代码（必须）
+	    - README.md  介绍你的plugin (必须)
+	    - 其他文件 (可选)
 
 ## 作者
 
