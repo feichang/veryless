@@ -70,7 +70,7 @@ VeryLess提供了Plugin概念，任何人都可以利用Veryless创建属于自�
    * 插件名字（英文）
    * 描述：插件简要描述
    * 文档地址：插件的文档地址
-   * 插件url: 插件下载地址，如果你存放在github上，地址如 https://raw.github.com/feichang/veryless/master/plugins/css3/index.less
+   * 插件url: 如 https://raw.github.com/feichang/veryless/master/plugins/css3/index.less
    * 微博：你的微博名称 如 @非常长
    * blog: 你的博客地址，如果有请填写
    * github: 你的github地址，如果有请填写
