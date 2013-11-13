@@ -81,9 +81,42 @@ VeryLess提供了Plugin概念，任何人都可以利用Veryless创建属于自�
 	* 微博：@非常长
 	* http://veryued.org
 
-## 开发者&贡献者
-
-* 飞长
 * TooBug
-* fengdi
-* 石霸
+    * 微博：@Toobug
+    * http://www.toobug.net/
+
+## Plugin 列表 & 她的作者们
+
+### CSS3
+
+* 描述：提供一些CSS3快捷方式
+* 文档地址：https://github.com/feichang/veryless/tree/master/plugins/css3
+* 作者：飞长
+* 微博：@非常长
+* blog: http://veryued.org
+* github: https://github.com/feichang
+
+### Animation
+
+* 描述：提供一些Animation的方法
+* 文档地址：https://github.com/feichang/veryless/tree/master/plugins/animation
+* 微博：@非常长
+* blog: http://veryued.org
+* github: https://github.com/feichang
+
+### BrandColor
+
+* 描述：提供各大公司的标准颜色
+* 文档地址：http://veryless.org/veryless/test/ui/color/color.html
+* 微博：@非常长
+* blog: http://veryued.org
+* github: https://github.com/feichang
+
+### Waterflow
+
+* 描述：瀑布流布局
+* 文档地址：https://github.com/feichang/veryless/tree/master/plugins/waterfall
+* 作者：moe
+* 微博：
+* blog
+* github: https://github.com/fengliu222
