@@ -1,22 +1,22 @@
 {
     "plugins": [{
         "url": "https://raw.github.com/feichang/veryless/master/plugins/css3/index.less",
-        "desc": "CSS3²å¼ş",
-        "author": "·É³¤",
+        "desc": "CSS3æ’ä»¶",
+        "author": "é£é•¿",
         "email": "veryued@gmail.com"
     },{
         "url": "https://raw.github.com/feichang/veryless/master/plugins/animation/index.less",
-        "desc": "Animation²å¼ş",
-        "author": "·É³¤",
+        "desc": "Animationæ’ä»¶",
+        "author": "é£é•¿",
         "email": "veryued@gmail.com"
     },{
         "url": "https://github.com/feichang/veryless/blob/master/plugins/brand-color/index.less",
-        "desc": "ÑÕÉ«²å¼ş",
-        "author": "·É³¤",
+        "desc": "é¢œè‰²æ’ä»¶",
+        "author": "é£é•¿",
         "email": "veryued@gmail.com"
     },{
         "url": "https://raw.github.com/feichang/veryless/master/plugins/waterfall/index.less",
-        "desc": "ÆÙ²¼Á÷²å¼ş",
+        "desc": "ç€‘å¸ƒæµæ’ä»¶",
         "author": "moe",
         "email": "444984@qq.com"
     }]
