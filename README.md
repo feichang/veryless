@@ -1,4 +1,4 @@
-# VeryLess 2.0
+# VeryLess 2.0 awesome project
 http://veryless.org
 
 VeryLess是基于LESS的Mixin扩展库,由LESS中国社区( http://lesscss.net/ )发起。<br>
